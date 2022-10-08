@@ -4,7 +4,7 @@ name: CI
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
+  # Triggers the workflow on push or pull request events
   pull_request:
     branches: [ "main" ]
 
@@ -15,7 +15,6 @@ jobs:
     name: Verify if PR is from develop branch
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -24,7 +23,9 @@ jobs:
       
       - name: Extract branch name
         shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        run: |
+          echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})" &&
+          echo "Source branch: ${{ branch }}"
         id: extract_branch
         
       - name: Verify if PR is from develop branch
