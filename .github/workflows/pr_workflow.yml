@@ -20,22 +20,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      
-      - name: Extract branch name
-        shell: bash
-        run: |
-          echo "##[set-output name=branch;]$(echo ${GITHUB_REF##*/})" &&
-          echo "Source branch: ${GITHUB_REF#refs/heads/}"
-        id: extract_branch
-        
+
       - name: Verify if PR is from develop branch
         shell: bash
         run: |
-          if [ ! "${{ steps.extract_branch.outputs.branch }}" == "develop" ]; then
+          if [ ! "${{ github.head_ref }}" == "develop" ]; then
             echo "Only develop branch can make pull requests to main" &&
-            echo "Base ref: ${{github.base_ref}}" &&
-            echo "Head ref: ${{github.head_ref}}" &&
-            echo "Ref: ${{github.base_ref}}" &&
             exit 1
           else
             exit 0
