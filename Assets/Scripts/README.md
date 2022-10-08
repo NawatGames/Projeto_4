@@ -7,12 +7,12 @@
 | `Classes`                | **Pascal Case**, ex: MyClass |
 | `Variáveis públicas ou serializadas`                | **Camel Case**, ex: variableName |
 | `Variáveis privadas`                | **Camel Case** com "_" de prefixo, ex: _variableName |
+| `Métodos`                | **Pascal Case**, ex: MyFunction |
 | `UnityEvent`                | **Camel Case** com "Event" de sufixo, ex: changedLifeEvent |
 | `Função de conexão de eventos`                | **Pascal Case** com "On" de sufixo, ex: OnLifeChange |
-| `Função`                | **Pascal Case**, ex: MyFunction |
 | `Structs`                | **Pascal Case**, ex: MyStruct |
 | `Enums`                | **Pascal Case**, ex: MyEnum |
-| `Flags`                | **Pascal Case** com "Flag" de sufixo, ex: HasDiedFlag |
+| `Flags`                | **Pascal Case** com "Flag" de sufixo, ex: DamageEventFlag |
 | `Courotines`                | **Pascal Case** com "Routine" de sufixo, ex: DelayRotine |
 | `ScriptableObjects`                | **Pascal Case** com "SO" de sufixo, ex: NotebookSO |
 | `MonoBehaviour - envolva e seja interface de outro componente`                | **Pascal Case** com "Controller" de sufixo, ex: PlayerMovementControler |
