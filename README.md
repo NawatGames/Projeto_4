@@ -49,10 +49,10 @@ git push
 
 O repositório deste projeto está estruturado como o modelo a seguir:
 
-| File / Folder                          | Contents                                                                           |
+| Arquivo / Diretório                    | Conteúdos                                                                           |
 | -------------------------------------- | ---------------------------------------------------------------------------------- |
 | `Assets/`                              | Recursos gerais do jogo incluindo scripts, arte e sons |
 | `docs/`                                | Documentos como diagramas e imagens |
-| `Packages/`                            | Contém a o arquivo manifest utilizado para manter os links de dependência entre pacotes, além de um arquivo listando pacotes individuais instalados no projeto |
+| `Packages/`                            | Contém o arquivo manifest utilizado para manter os links de dependência entre pacotes, além de um arquivo listando pacotes individuais instalados no projeto |
 | `ProjectSettings/`                     | Armazena todas as configurações do projeto |
 | `README.md`                            | Este arquivo |
