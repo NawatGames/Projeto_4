@@ -9,13 +9,13 @@
 | `Variáveis privadas`                | **Camel Case** com "_" de prefixo, ex: _variableName |
 | `Métodos`                | **Pascal Case**, ex: MyFunction |
 | `UnityEvent`                | **Camel Case** com "Event" de sufixo, ex: changedLifeEvent |
-| `Função de conexão de eventos`                | **Pascal Case** com "On" de sufixo, ex: OnLifeChange |
+| `Métodos de conexão de eventos`                | **Pascal Case** com "On" de sufixo, ex: OnLifeChange |
 | `Structs`                | **Pascal Case**, ex: MyStruct |
 | `Enums`                | **Pascal Case**, ex: MyEnum |
 | `Flags`                | **Pascal Case** com "Flag" de sufixo, ex: DamageEventFlag |
 | `Courotines`                | **Pascal Case** com "Routine" de sufixo, ex: DelayRotine |
 | `ScriptableObjects`                | **Pascal Case** com "SO" de sufixo, ex: NotebookSO |
-| `MonoBehaviour - envolva e seja interface de outro componente`                | **Pascal Case** com "Controller" de sufixo, ex: PlayerMovementControler |
+| `MonoBehaviour - envolva ou seja interface de outro componente`                | **Pascal Case** com "Controller" de sufixo, ex: PlayerMovementControler |
 | `MonoBehaviour - que instancia outros GameObjects ou Prefabs`                | **Pascal Case** com "Generator" de sufixo, ex: BulletGenerator |
 
 # Estrutura de Diretórios
