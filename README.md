@@ -18,13 +18,13 @@ O Projeto irá utilizar-se de sistemas como componentes de GameObjects na plataf
 
 # Relacionamento de branches
 
-## Branch main
+- **Branch main**
 A main será a versão mais estável e funcional do projeto.
 
-## Branch develop
+- **Branch develop**
 Esta branch irá aglomerar todas as modificações realizadas durante o desenvolvimento de novas tarefas e features, ela deve ser organizada antes de seu conteúdo ser enviado à **main**.
 
-## Branches criadas a partir da develop
+- **Branches criadas a partir da develop**
 Branches de trabalho, onde os desenvolvedores irão realizar commits. Quando um trabalho for finalizado, seu conteúdo deve ser enviado à branch **develop**.
 
 # Construíndo e desenvolvendo o projeto
