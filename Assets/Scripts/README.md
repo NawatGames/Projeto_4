@@ -1,3 +1,23 @@
+# Padrões de escrita para o desenvolvimento do código
+
+- O código deve ser desenvolvido inteiramente em inglês, tanto com nome de variáveis quanto o de arquivos
+
+| Tipo                     | Padrão e exemplo      |
+| -------------------------|-----------------------|
+| `Classes`                | **Pascal Case**, ex: MyClass |
+| `Variáveis públicas ou serializadas`                | **Camel Case**, ex: variableName |
+| `Variáveis privadas`                | **Camel Case** com "_" de prefixo, ex: _variableName |
+| `Eventos`                | **Camel Case** com "Event" de sufixo, ex: changedLifeEvent |
+| `Função de conexão de eventos`                | **Pascal Case** com "On" de sufixo, ex: OnLifeChange |
+| `Função`                | **Pascal Case**, ex: MyFunction |
+| `Structs`                | **Pascal Case**, ex: MyStruct |
+| `Enums`                | **Pascal Case**, ex: MyEnum |
+| `Flags`                | **Pascal Case** com "Flag" de sufixo, ex: HasDiedFlag |
+| `Courotines`                | **Pascal Case** com "Routine" de sufixo, ex: DelayRotine |
+| `ScriptableObjects`                | **Pascal Case** com "SO" de sufixo, ex: NotebookSO |
+| `MonoBehaviour - envolva e seja interface de outro componente`                | **Pascal Case** com "Controller" de sufixo, ex: PlayerMovementControler |
+| `MonoBehaviour - que instancia outros GameObjects ou Prefabs`                | **Pascal Case** com "Generator" de sufixo, ex: BulletGenerator |
+
 # Estrutura de Diretórios
 
 A estrutura de diretórios dos Scripts segue o seguinte padrão:
@@ -5,7 +25,7 @@ A estrutura de diretórios dos Scripts segue o seguinte padrão:
 
 Exemplos:
 ```
-SistemaDeEventos/
-SistemaDeStatemachine/Animacao
-SistemaDeStatemachine/SistemaDeGameManager/DeathScreen
+EventSystem/
+StatemachineSystem/Animations
+StatemachineSystem/Animations/GameManagerSystem/DeathScreen
 ```
