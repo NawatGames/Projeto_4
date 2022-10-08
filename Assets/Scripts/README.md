@@ -7,7 +7,7 @@
 | `Classes`                | **Pascal Case**, ex: MyClass |
 | `Variáveis públicas ou serializadas`                | **Camel Case**, ex: variableName |
 | `Variáveis privadas`                | **Camel Case** com "_" de prefixo, ex: _variableName |
-| `Eventos`                | **Camel Case** com "Event" de sufixo, ex: changedLifeEvent |
+| `UnityEvent`                | **Camel Case** com "Event" de sufixo, ex: changedLifeEvent |
 | `Função de conexão de eventos`                | **Pascal Case** com "On" de sufixo, ex: OnLifeChange |
 | `Função`                | **Pascal Case**, ex: MyFunction |
 | `Structs`                | **Pascal Case**, ex: MyStruct |
