@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 namespace EventSystem {
     [CreateAssetMenu(fileName = "Game_Event", menuName = "Scriptable Objects/Event")]
-    public class GameEventSO : ScriptableObject {
+    public class GameEventSO : ScriptableObject, IGameEvent {
         private HashSet<UnityEvent> _unityEventsSet;
         
         private void OnEnable() {
