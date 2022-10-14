@@ -2,11 +2,11 @@
 using UnityEngine;
 
 namespace EventSystem {
-    public abstract class GameEventEmitter : MonoBehaviour{
+    public abstract class GameEventEmitter{
         public GameEventSO eventToEmmit;
 
-        public void InvokeGameEvent() {
-            eventToEmmit.InvokeEvent();
+        public void InvokeGameEvent(GameEventSO eventToInvoke) {
+            eventToInvoke?.InvokeEvent();
         }
     }
 }
