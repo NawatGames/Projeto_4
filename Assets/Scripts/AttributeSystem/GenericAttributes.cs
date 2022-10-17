@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace AttributeSystem
 {
-    public class GenericAttributes : MonoBehaviour, ILifeAtribute, IDamageAttribute, IMovementAttribute {
+    public class GenericAttributes : MonoBehaviour, ILifeAttribute, IDamageAttribute, IMovementAttribute {
         protected float _health;
 
         protected float _damage;
