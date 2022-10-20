@@ -1,4 +1,4 @@
-namespace DefaultNamespace {
+namespace HealthSystem {
     public interface IHealthSystem {
         void SetCurrentHealth(int newValue);
         void CureHealth(int cureAmount);

@@ -1,11 +1,12 @@
 using EventSystem;
 using UnityEngine;
 
-namespace DefaultNamespace {
+namespace HealthSystem {
     public class HealthSystem : GameEventEmitter, IHealthSystem {
         [SerializeField] private int _currentHealth;
         [SerializeField] private int _maxHealth;
 
+        [Header("Events")]
         [SerializeField] private GameEventSO _damageAppliedEvent;
         [SerializeField] private GameEventSO _diedEvent;
         [SerializeField] private GameEventSO _healthCuredEvent;
