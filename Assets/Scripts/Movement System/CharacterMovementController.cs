@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using EventSystem.SimpleEvents;
 using UnityEngine;
 
 public class CharacterMovementController : MonoBehaviour
@@ -10,14 +12,30 @@ public class CharacterMovementController : MonoBehaviour
     [SerializeField] float jumpSpeed = 1f;
     [SerializeField] Vector2 inputDirection = Vector2.zero;
     [SerializeField] float walkSpeed = 1f;
+
+
+    [SerializeField] private Vector2Event movementDirectionEvent; 
+    [SerializeField] private BoolEvent jumpChangedEvent; 
+    
     private void OnEnable()
     {
-        
+        movementDirectionEvent.SubscribeUnityEvent(OnInputDirectionChanged);
+        jumpChangedEvent.SubscribeUnityEvent(OnJumpChanged);
+    }
+
+    private void OnJumpChanged(bool arg0)
+    {
+        if (arg0)
+        {
+            OnJumpRequest();
+        }
     }
 
 
     private void OnDisable()
     {
+        movementDirectionEvent.UnsubscribeUnityEvent(OnInputDirectionChanged);
+        jumpChangedEvent.UnsubscribeUnityEvent(OnJumpChanged);
 
     }
 
@@ -38,6 +56,7 @@ public class CharacterMovementController : MonoBehaviour
 
     private void OnInputDirectionChanged(Vector2 inputDirection)
     {
+        inputDirection.y = 0;
         this.inputDirection = inputDirection;
     }
 

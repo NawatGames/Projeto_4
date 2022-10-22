@@ -3,15 +3,15 @@ using UnityEngine.Events;
 
 namespace EventSystem {
     public class GameEventListener : MonoBehaviour {
-        [SerializeField] private GameEventSO _eventToListen;
-        [SerializeField] private UnityEvent _eventListener;
+        [SerializeField] private GameEventSO eventToListen;
+        [SerializeField] private UnityEvent eventListener;
         
         private void OnEnable() {
-            _eventToListen.SubscribeUnityEvent(_eventListener);
+            eventToListen.SubscribeUnityEvent(eventListener);
         }
 
         private void OnDisable() {
-            _eventToListen.UnsubscribeUnityEvent(_eventListener);
+            eventToListen.UnsubscribeUnityEvent(eventListener);
         }
     }
 }
