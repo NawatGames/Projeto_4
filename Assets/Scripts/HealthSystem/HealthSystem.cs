@@ -3,44 +3,48 @@ using UnityEngine;
 
 namespace HealthSystem {
     public class HealthSystem : GameEventEmitter, IHealthSystem {
-        [SerializeField] private int _currentHealth;
-        [SerializeField] private int _maxHealth;
+        [SerializeField] private int currentHealth;
+        [SerializeField] private int maxHealth;
         public bool canTakeDamage = true;
 
         [Header("Events")]
-        [SerializeField] private GameEventSO _damageAppliedEvent;
-        [SerializeField] private GameEventSO _diedEvent;
-        [SerializeField] private GameEventSO _healthCuredEvent;
+        [SerializeField] private GameEventSO damageAppliedEvent;
+        [SerializeField] private GameEventSO diedEvent;
+        [SerializeField] private GameEventSO healthCuredEvent;
         
         private void Awake() {
-            _currentHealth = _maxHealth;
+            currentHealth = maxHealth;
+        }
+
+        void Update()
+        {
+            ApplyDamage(10);
         }
 
         public void SetCurrentHealth(int newValue) {
-            _currentHealth = newValue;
-            _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);
+            currentHealth = newValue;
+            currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         }
 
         public void CureHealth(int cureAmount) {        
-            SetCurrentHealth(_currentHealth + cureAmount);
-            InvokeGameEvent(_healthCuredEvent);
+            SetCurrentHealth(currentHealth + cureAmount);
+            InvokeGameEvent(healthCuredEvent);
         }
 
         public void ApplyDamage(int damageToApply) {
             if (canTakeDamage)
             {
-                SetCurrentHealth(_currentHealth - damageToApply);
+                SetCurrentHealth(currentHealth - damageToApply);
 
-                if (_currentHealth <= 0) {
-                    InvokeGameEvent(_diedEvent);
+                if (currentHealth <= 0) {
+                    InvokeGameEvent(diedEvent);
                     return;
                 }
-                InvokeGameEvent(_damageAppliedEvent);
+                InvokeGameEvent(damageAppliedEvent);
             }
         }
 
-        public int CurrentHealth => _currentHealth;
-
-        public int MaxHealth => _maxHealth;
+        public int CurrentHealth => currentHealth;
+        public int MaxHealth => maxHealth;
     }
 }
