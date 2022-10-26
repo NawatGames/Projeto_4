@@ -5,7 +5,7 @@ namespace HealthSystem {
     public class HealthSystem : GameEventEmitter, IHealthSystem {
         [SerializeField] private int _currentHealth;
         [SerializeField] private int _maxHealth;
-        private bool _canTakeDamage = true;
+        public bool canTakeDamage = true;
 
         [Header("Events")]
         [SerializeField] private GameEventSO _damageAppliedEvent;
@@ -27,7 +27,7 @@ namespace HealthSystem {
         }
 
         public void ApplyDamage(int damageToApply) {
-            if (_canTakeDamage)
+            if (canTakeDamage)
             {
                 SetCurrentHealth(_currentHealth - damageToApply);
 
