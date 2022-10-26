@@ -16,11 +16,6 @@ namespace HealthSystem {
             currentHealth = maxHealth;
         }
 
-        void Update()
-        {
-            ApplyDamage(10);
-        }
-
         public void SetCurrentHealth(int newValue) {
             currentHealth = newValue;
             currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
