@@ -6,7 +6,7 @@ namespace Enemies.Shooter {
     
     [RequireComponent(typeof(CircleCollider2D))]
     public class PlayerDetector : MonoBehaviour {
-        [SerializeField] private UnityEvent _playerDetectedEvent;
+        [SerializeField] private UnityEvent<Vector2> _playerDetectedEvent;
         [SerializeField] private float _delayInSeconds;
         [SerializeField] private LayerMask _layerMasks;
         private CircleCollider2D _collider;
@@ -41,12 +41,10 @@ namespace Enemies.Shooter {
                 var direction = (playerPosition - enemyPosition).normalized;
                 
                 var raycastHit2D = Physics2D.Raycast(enemyPosition , direction, _collider.radius,_layerMasks);
-                print(raycastHit2D.transform.tag);
+                
                 if (raycastHit2D && raycastHit2D.transform.gameObject == _playerInstance) {
-                    _playerDetectedEvent.Invoke();
-                    print($"Objeto detectado {raycastHit2D.transform.tag}");
+                    _playerDetectedEvent.Invoke(direction);
                 }
-                print("While ativo");
                 yield return new WaitForSeconds(delayInSeconds);
             }
         }
