@@ -8,6 +8,7 @@ namespace Enemies.Shooter {
     public class PlayerDetector : MonoBehaviour {
         [SerializeField] private UnityEvent _playerDetectedEvent;
         [SerializeField] private float _delayInSeconds;
+        [SerializeField] private LayerMask _layerMasks;
         private CircleCollider2D _collider;
         private GameObject _playerInstance;
 
@@ -34,15 +35,18 @@ namespace Enemies.Shooter {
         }
         
         private IEnumerator CheckIfPlayerIsVisibleCoroutine(float delayInSeconds) {
-            var enemyPosition = transform.position;
-            var playerPosition = _playerInstance.transform.position;
-            var direction = (playerPosition - enemyPosition).normalized;
-
             while (true) {
-                if (Physics2D.Raycast(enemyPosition, direction, _collider.radius)) {
+                var enemyPosition = transform.position;
+                var playerPosition = _playerInstance.transform.position;
+                var direction = (playerPosition - enemyPosition).normalized;
+                
+                var raycastHit2D = Physics2D.Raycast(enemyPosition , direction, _collider.radius,_layerMasks);
+                print(raycastHit2D.transform.tag);
+                if (raycastHit2D && raycastHit2D.transform.gameObject == _playerInstance) {
                     _playerDetectedEvent.Invoke();
+                    print($"Objeto detectado {raycastHit2D.transform.tag}");
                 }
-
+                print("While ativo");
                 yield return new WaitForSeconds(delayInSeconds);
             }
         }
