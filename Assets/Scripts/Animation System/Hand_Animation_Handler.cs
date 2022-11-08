@@ -25,7 +25,7 @@ public class Hand_Animation_Handler : MonoBehaviour
         var ida = DOTween.To(Refresh,ti,tf,duration).SetEase(animationCurve);
         var volta = DOTween.To(Refresh,tf,ti,duration).SetEase(animationCurve);
         
-        var Sequence = DOTween.Sequence().Append(ida).Append(volta).SetLoops(-1).Play();
+        var sequence = DOTween.Sequence().Append(ida).Append(volta).SetLoops(-1).Play();
         
     }
     void Refresh(float value)
