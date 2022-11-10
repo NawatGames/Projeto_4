@@ -23,7 +23,7 @@ namespace HealthSystem {
 
         public void CureHealth(int cureAmount) {        
             SetCurrentHealth(currentHealth + cureAmount);
-            InvokeGameEvent(healthCuredEvent);
+            healthCuredEvent.InvokeEvent();
         }
 
         public void ApplyDamage(int damageToApply) {
