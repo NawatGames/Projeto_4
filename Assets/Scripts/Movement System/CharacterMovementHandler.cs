@@ -1,21 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.Tilemaps;
 
-public class CharacterMovementHandler : MonoBehaviour
+namespace Movement_System
 {
-    [SerializeField] private Transform root;
-    [SerializeField] private new Rigidbody2D rigidbody2D;
-
-    public void Move(Vector2 direction, float speed)
+    public class CharacterMovementHandler : MonoBehaviour
     {
-        root.position = (Vector3) direction * (speed * Time.deltaTime) + root.position;
+        [SerializeField] private Transform root;
+        [SerializeField] private new Rigidbody2D rigidbody2D;
+
+        public UnityEvent characterJumpedEvent;
+
+        public void Move(Vector2 direction, float speed)
+        {
+            root.position = (Vector3) direction * (speed * Time.deltaTime) + root.position;
+        }
+
+        public void Jump(Vector2 velocity)
+        {
+            rigidbody2D.velocity = velocity;
+            characterJumpedEvent.Invoke();
+        }
     }
-
-    public void Jump(Vector2 velocity)
-    {
-        rigidbody2D.velocity = velocity;
-    }
-
-
 }
