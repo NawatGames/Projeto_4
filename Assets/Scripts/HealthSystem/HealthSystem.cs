@@ -2,7 +2,7 @@ using EventSystem;
 using UnityEngine;
 
 namespace HealthSystem {
-    public class HealthSystem : GameEventEmitter, IHealthSystem {
+    public class HealthSystem : MonoBehaviour, IHealthSystem {
         [SerializeField] private int currentHealth;
         [SerializeField] private int maxHealth;
         public bool canTakeDamage = true;
@@ -23,7 +23,7 @@ namespace HealthSystem {
 
         public void CureHealth(int cureAmount) {        
             SetCurrentHealth(currentHealth + cureAmount);
-            InvokeGameEvent(healthCuredEvent);
+            healthCuredEvent.InvokeEvent();
         }
 
         public void ApplyDamage(int damageToApply) {
@@ -32,10 +32,10 @@ namespace HealthSystem {
                 SetCurrentHealth(currentHealth - damageToApply);
 
                 if (currentHealth <= 0) {
-                    InvokeGameEvent(diedEvent);
+                    diedEvent.InvokeEvent();
                     return;
                 }
-                InvokeGameEvent(damageAppliedEvent);
+                damageAppliedEvent.InvokeEvent();
             }
         }
 
