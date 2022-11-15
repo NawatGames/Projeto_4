@@ -24,18 +24,30 @@ namespace Enemies.Agressor {
             if (!CheckIfTheresFloorAhead() || CheckIfTheresAWallAhead()) {
                 _currentDirection *= -1;
             }
+
+            if (CheckIfPlayerIsAhead()) {
+                print("Puta que me pariu! O player tá aqui!");
+            }
         }
 
+        private bool CheckIfPlayerIsAhead() {
+            var hit = CheckAhead();
+            
+            if(hit)
+                return hit.transform.CompareTag("Player");
+            return false;
+        }
+        
         private bool CheckIfTheresAWallAhead() {
             var hit = CheckAhead();
             
             if(hit)
-                return hit.transform.tag != "Player";
+                return !hit.transform.CompareTag("Player");
             return false;
         }
 
         private bool CheckIfTheresFloorAhead() {
-            return Physics2D.Raycast(transform.position + new Vector3((_currentDirection.x* (_collider2D.size.x / 2)),0,0), Vector2.down);
+            return Physics2D.Raycast(transform.position + new Vector3((_currentDirection.x* (_collider2D.size.x / 2)),0,0), Vector2.down, 1f);
         }
         
         private RaycastHit2D CheckAhead() {
