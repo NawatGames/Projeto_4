@@ -1,12 +1,13 @@
-using System;
 using Movement_System;
 using UnityEngine;
 
 namespace Enemies.Agressor {
     [RequireComponent(typeof(CharacterMovementHandler))]
     public class AgressorMovementController : MonoBehaviour {
-        [SerializeField] private float _maxSpeed;
+        [SerializeField] private float _speedPatrolMode;
+        [SerializeField] private float _speedChaseMode;
         [SerializeField] private float _visionDistance;
+        
         private BoxCollider2D _collider2D;
         private CharacterMovementHandler _movementHandler;
         private Vector2 _currentDirection = Vector2.right;
@@ -15,7 +16,7 @@ namespace Enemies.Agressor {
         private void Awake() {
             _movementHandler = GetComponent<CharacterMovementHandler>();
             _collider2D = GetComponent<BoxCollider2D>();
-            _currentSpeed = _maxSpeed;
+            _currentSpeed = _speedPatrolMode;
         }
 
         private void Update() {
@@ -26,7 +27,11 @@ namespace Enemies.Agressor {
             }
 
             if (CheckIfPlayerIsAhead()) {
-                print("Puta que me pariu! O player tá aqui!");
+                print("Puta que me pariu. Que susto! O player tá aqui!");
+                _currentSpeed = _speedChaseMode;
+            }
+            else {
+                _currentSpeed = _speedPatrolMode;
             }
         }
 
@@ -40,9 +45,9 @@ namespace Enemies.Agressor {
         
         private bool CheckIfTheresAWallAhead() {
             var hit = CheckAhead();
-            
+            var hitDistance = hit?Vector2.Distance(transform.position, hit.transform.position):Mathf.Infinity;
             if(hit)
-                return !hit.transform.CompareTag("Player");
+                return !hit.transform.CompareTag("Player") && hitDistance <= _collider2D.size.x+0.5f;
             return false;
         }
 
