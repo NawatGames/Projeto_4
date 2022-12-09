@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &875786567672349081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1975730676265607333}
+  m_Layer: 0
+  m_Name: FeetPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1975730676265607333
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875786567672349081}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.13, y: -0.86, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3933122014406039308}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3325045022345616248
 GameObject:
   m_ObjectHideFlags: 0
@@ -48,13 +79,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c2e8176bad45504e8395efbd4ec1a9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterMovementHandler: {fileID: 0}
-  movementVerifier: {fileID: 0}
+  characterMovementHandler: {fileID: 7936602458689095848}
+  movementVerifier: {fileID: 8506260595458142205}
   jumpSpeed: 1
   inputDirection: {x: 0, y: 0}
   walkSpeed: 1
-  movementDirectionEvent: {fileID: 0}
-  jumpChangedEvent: {fileID: 0}
+  movementDirectionEvent: {fileID: 11400000, guid: 5c570183a46c3fd4790a4d5463eb4f1b, type: 2}
+  jumpChangedEvent: {fileID: 11400000, guid: 6f201f6fb75d2734796dd122051e5f43, type: 2}
 --- !u!114 &6931216580436677533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,10 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9abe9095c83193844bcd7b9026a7c058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  feetPos: {fileID: 0}
+  feetPos: {fileID: 1975730676265607333}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   isGrounded: 0
   checkRadius: 1
   touchGroundEvent:
@@ -121,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 648a2d39afe40b141a5d1b21c7069d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  root: {fileID: 0}
+  root: {fileID: 3933122014406039308}
   rigidbody2D: {fileID: 4249428506252513981}
   characterJumpedEvent:
     m_PersistentCalls:
@@ -172,11 +203,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
-  maxHealth: 0
+  maxHealth: 100
   canTakeDamage: 1
-  damageAppliedEvent: {fileID: 0}
-  diedEvent: {fileID: 0}
-  healthCuredEvent: {fileID: 0}
+  damageAppliedEvent: {fileID: 11400000, guid: e1de9af6951c4054c87bc860e3f0b5cd, type: 2}
+  diedEvent: {fileID: 11400000, guid: 013c690050e6c1346bc0246ef0fa5e79, type: 2}
+  healthCuredEvent: {fileID: 11400000, guid: 8e920fb9325fa814194efa2511656936, type: 2}
 --- !u!114 &6378235807163642654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,9 +220,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb9d222f2be48e69e3a9bdeac597cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  invulnerabilityTimeInSeconds: 0
-  invulnerabilityStartedEvent: {fileID: 0}
-  invulnerabilityEndedEvent: {fileID: 0}
+  invulnerabilityTimeInSeconds: 1
+  invulnerabilityStartedEvent: {fileID: 11400000, guid: 198e76d2b5f947243aa2623fb9459d07, type: 2}
+  invulnerabilityEndedEvent: {fileID: 11400000, guid: 3e914cd493b5a21448a17d2ce55f41f4, type: 2}
 --- !u!1 &5564821980563434443
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,6 +255,7 @@ Transform:
   m_Children:
   - {fileID: 839265232795808832}
   - {fileID: 6340906628593506055}
+  - {fileID: 1975730676265607333}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
