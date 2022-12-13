@@ -12,7 +12,15 @@ namespace ElementSystem {
         private void Awake() {
             _generatorMonoBehaviour = GetComponent<ElementGeneratorMonoBehaviour>();
         }
+        
+        private void OnEnable() {
+            eventToListen.SubscribeUnityEvent(SelectElementFromIndex);
+        }
 
+        private void OnDisable() {
+            eventToListen.UnsubscribeUnityEvent(SelectElementFromIndex);
+        }
+        
         public void SelectElementFromIndex(int inputIndex) {
             var index = inputIndex - 1;
             if(index >= _generatorMonoBehaviour.AllPrimeElementsArray.Length)
@@ -34,15 +42,8 @@ namespace ElementSystem {
                 
                 return;
             }
-            
         }
 
-        private void OnEnable() {
-            eventToListen.SubscribeUnityEvent(SelectElementFromIndex);
-        }
 
-        private void OnDisable() {
-            eventToListen.UnsubscribeUnityEvent(SelectElementFromIndex);
-        }
     }
 }

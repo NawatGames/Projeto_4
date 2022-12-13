@@ -180,6 +180,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "DrawingMouse",
+            "id": "6a634da0-b848-449f-ba6b-38b6613bf1bf",
+            "actions": [
+                {
+                    "name": "LeftClick",
+                    "type": "Button",
+                    "id": "2e9a4031-d332-428b-bed4-751922d669b7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "91475dd1-6aa0-4b9b-936b-6b5a77b846bc",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftClick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

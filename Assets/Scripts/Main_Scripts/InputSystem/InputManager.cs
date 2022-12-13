@@ -4,13 +4,14 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace InputSystem {
-    public class InputManager : Singleton<InputManager>, InputMap.IMovementActions, InputMap.IElementSelectionActions {
+    public class InputManager : Singleton<InputManager>, InputMap.IMovementActions, InputMap.IElementSelectionActions, InputMap.IDrawingMouseActions {
 
         private InputMap inputMap;
         
         public Vector2Event walkDirectionChangedEvent;
         public BoolEvent  jumpChangedEvent;
         public IntegerEvent elementSelectedEvent;
+        public Vector2Event mouseLineDirectionEvent;
         
 
         private void Awake() {
@@ -18,6 +19,7 @@ namespace InputSystem {
             inputMap = new InputMap();
             inputMap.Movement.SetCallbacks(this);
             inputMap.ElementSelection.SetCallbacks(this);
+            inputMap.DrawingMouse.SetCallbacks(this);
             inputMap.Enable();
 
         }
@@ -59,6 +61,27 @@ namespace InputSystem {
         public void OnElement4(InputAction.CallbackContext context) {
             if(context.performed)
                 elementSelectedEvent.InvokeEvent(4);
+        }
+
+
+        public void OnLeftClick(InputAction.CallbackContext context) {
+            Vector2 initialPoint = new();
+            Vector2 endPoint = new();
+            
+            if(context.performed) {
+                initialPoint = GetMouseWorldPosition();
+            }
+            if(context.canceled) {
+                endPoint = GetMouseWorldPosition();
+            }
+            
+            mouseLineDirectionEvent.InvokeEvent(endPoint - initialPoint);
+        }
+
+        private static Vector3 GetMouseWorldPosition() {
+            var mousePoint = Mouse.current.position.ReadValue();
+            var mouseWorldPosition = Camera.main.ScreenToWorldPoint(mousePoint);
+            return mouseWorldPosition;
         }
     }
 }
