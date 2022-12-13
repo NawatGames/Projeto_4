@@ -12,7 +12,9 @@ namespace InputSystem {
         public BoolEvent  jumpChangedEvent;
         public IntegerEvent elementSelectedEvent;
         public Vector2Event mouseLineDirectionEvent;
-        
+
+        private Vector2 _mouseInitialPoint;
+
 
         private void Awake() {
             instance = this;
@@ -65,20 +67,21 @@ namespace InputSystem {
 
 
         public void OnLeftClick(InputAction.CallbackContext context) {
-            Vector2 initialPoint = new();
-            Vector2 endPoint = new();
+            Vector2 endPoint;
             
             if(context.performed) {
-                initialPoint = GetMouseWorldPosition();
+                _mouseInitialPoint = GetMouseWorldPosition();
             }
             if(context.canceled) {
                 endPoint = GetMouseWorldPosition();
+                mouseLineDirectionEvent.InvokeEvent(endPoint + Vector2.left * ((_mouseInitialPoint - endPoint).magnitude/2));
             }
             
-            mouseLineDirectionEvent.InvokeEvent(endPoint - initialPoint);
+            
+            
         }
 
-        private static Vector3 GetMouseWorldPosition() {
+        private static Vector2 GetMouseWorldPosition() {
             var mousePoint = Mouse.current.position.ReadValue();
             var mouseWorldPosition = Camera.main.ScreenToWorldPoint(mousePoint);
             return mouseWorldPosition;
