@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f51d3d2d1142798cd35247e20ee582, type: 3}
   m_Name: Glass
   m_EditorClassIdentifier: 
-  _primeElementsComposerArray: []
+  _primeElementsComposerArray:
+  - {fileID: 11400000, guid: 9d558f646751c6d4a8f2fe1db51f1b85, type: 2}
+  - {fileID: 11400000, guid: 3004f2cfd70791640a4eec5b93e4595e, type: 2}
