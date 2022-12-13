@@ -27,8 +27,8 @@ public class ElementGenerator {
         foreach (var primeElement in primeElementsArrayOrdered) {
             hash += primeElement.GetHashCode();
         }
-        
-        return ElementsDict[hash];
+
+        return ElementsDict.TryGetValue(hash, out var elementToReturn) ? elementToReturn : null;
     }
     
 }
