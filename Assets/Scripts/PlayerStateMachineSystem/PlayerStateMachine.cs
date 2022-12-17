@@ -5,10 +5,10 @@ namespace PlayerStateMachineSystem
 {
     public class PlayerStateMachine : MonoBehaviour
     {
-        private PlayerState defaultPlayerState;
-        private PlayerState currentPlayerState;
+        [SerializeField] private PlayerState defaultPlayerState;
+        [SerializeField] private PlayerState currentPlayerState;
         private PlayerState lastFramePlayerState;
-        private PlayerStateMachineEventHandler playerStateMachineEventHandler;
+        [SerializeField]private PlayerStateMachineEventHandler playerStateMachineEventHandler;
         private void LateUpdate()
         {
             lastFramePlayerState = currentPlayerState;
