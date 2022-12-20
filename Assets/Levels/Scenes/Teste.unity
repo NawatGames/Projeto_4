@@ -275,7 +275,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 400385389}
   m_LocalRotation: {x: -0.03126192, y: -0.0001973589, z: -0.0009647096, w: 0.9995107}
-  m_LocalPosition: {x: -2.8777, y: -2.17, z: -0.000000015154107}
+  m_LocalPosition: {x: 0, y: -2.17, z: -0.000000015154107}
   m_LocalScale: {x: 16.808727, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -328,6 +328,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventToListen: {fileID: 11400000, guid: 7de93eac72d01da4bbab1c90ad7a1f92, type: 2}
   platformPrefab: {fileID: 1374462836795830143, guid: 30cd63fd71cff5446a9accccac1b17f0, type: 3}
+  elementSelectedSingleton: {fileID: 11400000, guid: 78cea2717f34b394db5ac33ddfa6dc15, type: 2}
+  SpawnEvent: {fileID: 11400000, guid: 15fd91e3e85e704458b00a85bece03f4, type: 2}
+  _cleanSelectionOnSpawn: 1
 --- !u!1 &460925768
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,6 +344,7 @@ GameObject:
   - component: {fileID: 460925772}
   - component: {fileID: 460925771}
   - component: {fileID: 460925773}
+  - component: {fileID: 460925774}
   m_Layer: 0
   m_Name: ElementSelection
   m_TagString: Untagged
@@ -408,6 +412,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 33c0fa868fa911746b2318cb8f08b5c6, type: 2}
   - {fileID: 11400000, guid: a9d311cdf0856ee4182ab1dc3b1bc036, type: 2}
   - {fileID: 11400000, guid: 0081a061ae1db3a45af8dd31207181f4, type: 2}
+  - {fileID: 11400000, guid: 240aebf19c8e95440bc669eaf0bd0bb1, type: 2}
 --- !u!114 &460925773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,6 +426,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventToListen: {fileID: 11400000, guid: bbf7399643714b14fab0c5f19557b10f, type: 2}
+  elementSelectedSingleton: {fileID: 11400000, guid: 78cea2717f34b394db5ac33ddfa6dc15, type: 2}
+--- !u!114 &460925774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460925768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309574401d344b76979ff23f9ddd89c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: 15fd91e3e85e704458b00a85bece03f4, type: 2}
+  eventListener:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 460925773}
+        m_TargetAssemblyTypeName: ElementSystem.ElementsSelector, Main_Scripts
+        m_MethodName: CleanSelectedArray
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &657454077
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,7 +602,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1207662183}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.136, y: -0.91, z: 0}
+  m_LocalPosition: {x: 0, y: -0.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -902,7 +936,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003396311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.9897845, y: 6.14, z: 0}
+  m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
