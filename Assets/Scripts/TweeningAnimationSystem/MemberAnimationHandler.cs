@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class HandAnimationHandler : MonoBehaviour
+public class MemberAnimationHandler : MonoBehaviour
 {
-
+    public string AnimationState;
     public float duration;
 
     public AnimationCurve animationCurve;
