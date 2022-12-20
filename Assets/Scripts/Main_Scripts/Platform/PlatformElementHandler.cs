@@ -1,3 +1,4 @@
+using System;
 using ElementSystem;
 using UnityEngine;
 
@@ -9,7 +10,16 @@ namespace Main_Scripts.Platform {
             _platformElement = element;
             print($"Inicializada com o elemento: {_platformElement.name}");
             
-            //todo: alterar sprite da plataforma e outras coisas relacionadas aos elementos
+            _platformElement.PlatformBehaviour.StartBehaviour(gameObject);
+        }
+
+        private void Update() {
+            _platformElement.PlatformBehaviour.UpdateBehaviour(gameObject);
+        }
+
+
+        private void OnCollisionEnter2D(Collision2D col) {
+            _platformElement.PlatformBehaviour.OnCollisionEventResponse(col);
         }
     }
 }
