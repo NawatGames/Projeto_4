@@ -9,17 +9,24 @@ namespace Main_Scripts.Platform {
         public void Inialize(ElementSO element) {
             _platformElement = element;
             print($"Inicializada com o elemento: {_platformElement.name}");
+
+            foreach (var itemElement in _platformElement.PlatformBehavioursArray) {
+                itemElement.StartBehaviour(gameObject);
+            }
             
-            _platformElement.PlatformBehaviour.StartBehaviour(gameObject);
         }
 
-        private void Update() {
-            _platformElement.PlatformBehaviour.UpdateBehaviour(gameObject);
+        private void Update() {   
+            foreach (var itemElement in _platformElement.PlatformBehavioursArray) {
+                itemElement.UpdateBehaviour(gameObject);
+            }
         }
 
 
         private void OnCollisionEnter2D(Collision2D col) {
-            _platformElement.PlatformBehaviour.OnCollisionEventResponse(col);
+            foreach (var itemElement in _platformElement.PlatformBehavioursArray) {
+                itemElement.OnCollisionEventResponse(gameObject, col);
+            }
         }
     }
 }
