@@ -74,7 +74,7 @@ namespace InputSystem {
             }
             if(context.canceled) {
                 endPoint = GetMouseWorldPosition();
-                mouseLineDirectionEvent.InvokeEvent(endPoint + Vector2.left * ((_mouseInitialPoint - endPoint).magnitude/2));
+                mouseLineDirectionEvent.InvokeEvent(endPoint - Vector2.one * ((_mouseInitialPoint - endPoint).magnitude/2));
             }
             
             

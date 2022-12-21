@@ -330,7 +330,7 @@ MonoBehaviour:
   platformPrefab: {fileID: 1374462836795830143, guid: 30cd63fd71cff5446a9accccac1b17f0, type: 3}
   elementSelectedSingleton: {fileID: 11400000, guid: 78cea2717f34b394db5ac33ddfa6dc15, type: 2}
   SpawnEvent: {fileID: 11400000, guid: 15fd91e3e85e704458b00a85bece03f4, type: 2}
-  _cleanSelectionOnSpawn: 1
+  _cleanSelectionOnSpawn: 0
 --- !u!1 &460925768
 GameObject:
   m_ObjectHideFlags: 0

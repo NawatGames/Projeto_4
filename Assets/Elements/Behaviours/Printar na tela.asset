@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28f51d3d2d1142798cd35247e20ee582, type: 3}
-  m_Name: Comburent
+  m_Script: {fileID: 11500000, guid: 7deea047ca1742d893c6f7b3a1c62b40, type: 3}
+  m_Name: Printar na tela
   m_EditorClassIdentifier: 
-  _primeElementsComposerArray:
-  - {fileID: 11400000, guid: ebcc9686690f6e04f8ffae25d1f7ff26, type: 2}
-  - {fileID: 11400000, guid: 9d558f646751c6d4a8f2fe1db51f1b85, type: 2}

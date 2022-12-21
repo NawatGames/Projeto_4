@@ -8,8 +8,9 @@ namespace Main_Scripts.Platform {
 
         public void Inialize(ElementSO element) {
             _platformElement = element;
+            GetComponent<SpriteRenderer>().sprite = _platformElement.platformSprite;
+            
             print($"Inicializada com o elemento: {_platformElement.name}");
-
             foreach (var itemElement in _platformElement.PlatformBehavioursArray) {
                 itemElement.StartBehaviour(gameObject);
             }

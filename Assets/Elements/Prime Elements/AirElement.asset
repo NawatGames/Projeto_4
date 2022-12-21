@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 503555288663421eb9161f3d376d3079, type: 3}
   m_Name: AirElement
   m_EditorClassIdentifier: 
+  PlatformBehavioursArray:
+  - {fileID: 11400000, guid: 3afefc0d6c22f80449656896267956ea, type: 2}
