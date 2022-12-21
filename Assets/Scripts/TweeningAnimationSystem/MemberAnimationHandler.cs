@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,16 +18,17 @@ public class MemberAnimationHandler : MonoBehaviour
 
     public float xAxisElipse;
     public float yAxisElipse;
+    private Sequence _sequence;
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         var ida = DOTween.To(Refresh,ti,tf,duration).SetEase(animationCurve);
         var volta = DOTween.To(Refresh,tf,ti,duration).SetEase(animationCurve);
         
-        var sequence = DOTween.Sequence().Append(ida).Append(volta).SetLoops(-1).Play();
-        
+        _sequence = DOTween.Sequence().Append(ida).Append(volta).SetLoops(-1);
+        _sequence.Pause();
     }
     void Refresh(float value)
     {
@@ -34,10 +36,16 @@ public class MemberAnimationHandler : MonoBehaviour
 
         transform.localPosition = (Vector3)position;
     }
-    // Update is called once per frame
-    void Update()
+
+    private void OnEnable()
     {
-        
+        _sequence.Restart();
+        _sequence.Play();
+    }
+
+    private void OnDisable()
+    {
+        _sequence.Pause();
     }
 }
 

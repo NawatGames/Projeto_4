@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,18 +20,20 @@ public class BackFootAnimationHandler : MonoBehaviour
 
     public float xAxisElipse;
     public float yAxisElipse;
+    private Sequence _sequence;
 
-    public float phase = 0;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         _initialX = transform.localPosition.x;
         
         var ida = DOTween.To(Refresh,ti,tf,duration).SetEase(animationCurve);
         var volta = DOTween.To(RefreshLine,_initialX,_initialX + height, duration).SetEase(animationCurve);
 
-        var sequency = DOTween.Sequence().Append(ida).Append(volta).SetLoops(-1).Play();
+        _sequence = DOTween.Sequence().Append(ida).Append(volta).SetLoops(-1);
+        _sequence.Pause();
+
     }
     
     void Refresh(float value)
@@ -46,5 +49,16 @@ public class BackFootAnimationHandler : MonoBehaviour
         var position = new Vector2(value, 0) + offset;
         transform.localPosition = (Vector3)position;
 
+    }
+
+    private void OnEnable()
+    {
+        _sequence.Restart();
+        _sequence.Play();
+    }
+
+    private void OnDisable()
+    {
+        _sequence.Pause();
     }
 }

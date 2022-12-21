@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,16 +22,18 @@ public class FrontFootAnimationHandler : MonoBehaviour
     public float yAxisElipse;
 
     public float phase = 0;
+    private Sequence _sequence;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         _initialX = transform.localPosition.x;
         
         var volta = DOTween.To(RefreshLine,_initialX,_initialX + height, duration).SetEase(animationCurve);
         var ida = DOTween.To(Refresh,ti,tf,duration).SetEase(animationCurve);
         
-        var sequency = DOTween.Sequence().Append(volta).Append(ida).SetLoops(-1).Play();
+        _sequence = DOTween.Sequence().Append(volta).Append(ida).SetLoops(-1);
+        _sequence.Pause();
     }
     
     void Refresh(float value)
@@ -46,6 +49,17 @@ public class FrontFootAnimationHandler : MonoBehaviour
         var position = new Vector2(value, 0) + offset;
         transform.localPosition = (Vector3)position;
 
+    }
+
+    private void OnEnable()
+    {
+        _sequence.Restart();
+        _sequence.Play();
+    }
+
+    private void OnDisable()
+    {
+        _sequence.Pause();
     }
 }
 
