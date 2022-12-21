@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8559148241456024071}
   - component: {fileID: -7247246995770525671}
   - component: {fileID: -7534242316556933878}
+  - component: {fileID: 718851327712949102}
+  - component: {fileID: 1473779492629456343}
   m_Layer: 6
   m_Name: platform
   m_TagString: Untagged
@@ -146,3 +148,45 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &718851327712949102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374462836795830143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2da0e01ae544bf2a5e43cb23270d74f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decayDurationInSeconds: 5
+  eventToTriggerOnDecay: {fileID: 11400000, guid: 2df07f7ed708ad04fb702322e49e7c92, type: 2}
+--- !u!114 &1473779492629456343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374462836795830143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309574401d344b76979ff23f9ddd89c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: 2df07f7ed708ad04fb702322e49e7c92, type: 2}
+  eventListener:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 718851327712949102}
+        m_TargetAssemblyTypeName: Main_Scripts.Platform.DecaySystem, Main_Scripts
+        m_MethodName: Testando
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

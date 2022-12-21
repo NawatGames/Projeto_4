@@ -3,8 +3,8 @@ using UnityEngine;
 using UnityEngine.Events;
 
 namespace EventSystem {
-    [CreateAssetMenu(fileName = "Game_Event", menuName = "Scriptable Objects/Event")]
-    public class GameEventSO : ScriptableObject, IGameEvent {
+    [CreateAssetMenu(fileName = "Game_Event", menuName = "simple event/Event")]
+    public class NoTypeGameEvent : ScriptableObject, IGameEvent {
         private HashSet<UnityEvent> _unityEventsSet;
         
         private void OnEnable() {

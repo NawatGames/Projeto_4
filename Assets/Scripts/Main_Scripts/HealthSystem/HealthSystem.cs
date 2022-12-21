@@ -8,9 +8,9 @@ namespace HealthSystem {
         public bool canTakeDamage = true;
 
         [Header("Events")]
-        [SerializeField] private GameEventSO damageAppliedEvent;
-        [SerializeField] private GameEventSO diedEvent;
-        [SerializeField] private GameEventSO healthCuredEvent;
+        [SerializeField] private NoTypeGameEvent damageAppliedEvent;
+        [SerializeField] private NoTypeGameEvent diedEvent;
+        [SerializeField] private NoTypeGameEvent healthCuredEvent;
         
         private void Awake() {
             currentHealth = maxHealth;

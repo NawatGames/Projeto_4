@@ -9,8 +9,8 @@ namespace Main_Scripts.PlataformSpawner {
         public Vector2TupleEvent eventToListen;
         [SerializeField] private GameObject platformPrefab;
         [SerializeField] private ElementSelectedSingleton elementSelectedSingleton;
-        [SerializeField] private GameEventSO SpawnEvent;
-
+        [SerializeField] private NoTypeGameEvent SpawnEvent;
+        
         [Header("Designers, decidam isso")]
         [SerializeField] private bool _cleanElementSelectionOnSpawn;
         private void OnEnable() {
@@ -32,7 +32,11 @@ namespace Main_Scripts.PlataformSpawner {
 
             print($"Ponto inicial: x: {initialEndPointPair.Item1.x} y: {initialEndPointPair.Item1.y}");
             print($"Ponto final: x: {initialEndPointPair.Item2.x} y: {initialEndPointPair.Item2.y}");
-            Instantiate(platformPrefab, platformPosition, Quaternion.AngleAxis(CaparOAngulo(vectorAngle), Vector3.forward)).GetComponent<PlatformElementHandler>().Inialize(elementSelectedSingleton.Value);
+            var platformGameobj = Instantiate(platformPrefab, platformPosition,
+                Quaternion.AngleAxis(CaparOAngulo(vectorAngle), Vector3.forward));
+            
+            platformGameobj.GetComponent<PlatformElementHandler>().Inialize(elementSelectedSingleton.Value);
+            platformGameobj.GetComponent<DecaySystem>().StartDecayCoroutine();
             
             if(_cleanElementSelectionOnSpawn) {
                 elementSelectedSingleton.Value = null;
@@ -46,7 +50,7 @@ namespace Main_Scripts.PlataformSpawner {
             return 180 - angle;
         }
 
-        private float CaparOAngulo(float angle) {
+        private float CaparOAngulo(float angle){
             if (angle < 22.5) return 0f;
             if (angle >= 22.5 && angle <= 67.5) return 45f;
             if (angle > 67.5 && angle <= 90) return 90f;

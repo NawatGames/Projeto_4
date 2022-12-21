@@ -2,8 +2,8 @@ using UnityEngine;
 using UnityEngine.Events;
 
 namespace EventSystem {
-    public class GameEventListener : MonoBehaviour {
-        [SerializeField] private GameEventSO eventToListen;
+    public class NoTypeEventListener : MonoBehaviour {
+        [SerializeField] private NoTypeGameEvent eventToListen;
         [SerializeField] private UnityEvent eventListener;
         
         private void OnEnable() {
