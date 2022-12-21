@@ -155,7 +155,7 @@ MonoBehaviour:
   walkDirectionChangedEvent: {fileID: 11400000, guid: 5c570183a46c3fd4790a4d5463eb4f1b, type: 2}
   jumpChangedEvent: {fileID: 11400000, guid: 6f201f6fb75d2734796dd122051e5f43, type: 2}
   elementSelectedEvent: {fileID: 11400000, guid: bbf7399643714b14fab0c5f19557b10f, type: 2}
-  mouseLineDirectionEvent: {fileID: 11400000, guid: 7de93eac72d01da4bbab1c90ad7a1f92, type: 2}
+  mouseInitialAndEndPointEvent: {fileID: 11400000, guid: 7de93eac72d01da4bbab1c90ad7a1f92, type: 2}
 --- !u!4 &263142031
 Transform:
   m_ObjectHideFlags: 0
@@ -330,7 +330,7 @@ MonoBehaviour:
   platformPrefab: {fileID: 1374462836795830143, guid: 30cd63fd71cff5446a9accccac1b17f0, type: 3}
   elementSelectedSingleton: {fileID: 11400000, guid: 78cea2717f34b394db5ac33ddfa6dc15, type: 2}
   SpawnEvent: {fileID: 11400000, guid: 15fd91e3e85e704458b00a85bece03f4, type: 2}
-  _cleanSelectionOnSpawn: 1
+  _cleanElementSelectionOnSpawn: 0
 --- !u!1 &460925768
 GameObject:
   m_ObjectHideFlags: 0
@@ -932,7 +932,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003396311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalPosition: {x: 0, y: 4.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
