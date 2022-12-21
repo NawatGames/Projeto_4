@@ -11,7 +11,7 @@ namespace InputSystem {
         public Vector2Event walkDirectionChangedEvent;
         public BoolEvent  jumpChangedEvent;
         public IntegerEvent elementSelectedEvent;
-        public Vector2Event mouseLineDirectionEvent;
+        public Vector2TupleEvent mouseInitialAndEndPointEvent;
 
         private Vector2 _mouseInitialPoint;
 
@@ -74,7 +74,7 @@ namespace InputSystem {
             }
             if(context.canceled) {
                 endPoint = GetMouseWorldPosition();
-                mouseLineDirectionEvent.InvokeEvent(endPoint - Vector2.one * ((_mouseInitialPoint - endPoint).magnitude/2));
+                mouseInitialAndEndPointEvent.InvokeEvent((_mouseInitialPoint, endPoint));
             }
             
             

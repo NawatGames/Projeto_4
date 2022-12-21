@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 503555288663421eb9161f3d376d3079, type: 3}
   m_Name: EarthElement
   m_EditorClassIdentifier: 
+  PlatformBehavioursArray: []
+  platformSprite: {fileID: 21300000, guid: 008620e8ffe6ad44781d2bfcb5f80d6d, type: 3}

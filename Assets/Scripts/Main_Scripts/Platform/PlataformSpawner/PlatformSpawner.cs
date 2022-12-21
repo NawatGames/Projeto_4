@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Main_Scripts.PlataformSpawner {
     public class PlatformSpawner : MonoBehaviour {
-        public Vector2Event eventToListen;
+        public Vector2TupleEvent eventToListen;
         [SerializeField] private GameObject platformPrefab;
         [SerializeField] private ElementSelectedSingleton elementSelectedSingleton;
         [SerializeField] private GameEventSO SpawnEvent;
@@ -21,13 +21,14 @@ namespace Main_Scripts.PlataformSpawner {
             eventToListen.UnsubscribeUnityEvent(SpawnPlatform);
         }
 
-        public void SpawnPlatform(Vector2 vector2) {
+        public void SpawnPlatform((Vector2, Vector2) initialEndPointPair) {
             if (elementSelectedSingleton.Value == null)
                 return;
+           
+            var originalVector = initialEndPointPair.Item2 - initialEndPointPair.Item1;
+            var platformPosition = initialEndPointPair.Item2 - Vector2.right * (originalVector.x/2);
             
-            //todo: Não está rotacionando devidamente
-            var dir = vector2.normalized;
-            Instantiate(platformPrefab, vector2, Quaternion.Euler(dir)).GetComponent<PlatformElementHandler>().Inialize(elementSelectedSingleton.Value);
+            Instantiate(platformPrefab, platformPosition, Quaternion.identity).GetComponent<PlatformElementHandler>().Inialize(elementSelectedSingleton.Value);
             
             if(_cleanSelectionOnSpawn) {
                 elementSelectedSingleton.Value = null;

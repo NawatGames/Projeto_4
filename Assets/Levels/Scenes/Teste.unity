@@ -330,7 +330,7 @@ MonoBehaviour:
   platformPrefab: {fileID: 1374462836795830143, guid: 30cd63fd71cff5446a9accccac1b17f0, type: 3}
   elementSelectedSingleton: {fileID: 11400000, guid: 78cea2717f34b394db5ac33ddfa6dc15, type: 2}
   SpawnEvent: {fileID: 11400000, guid: 15fd91e3e85e704458b00a85bece03f4, type: 2}
-  _cleanSelectionOnSpawn: 0
+  _cleanSelectionOnSpawn: 1
 --- !u!1 &460925768
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,11 +408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1acb50d8f574b87a93c0521a7b0c7fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllSecondaryElements:
-  - {fileID: 11400000, guid: 33c0fa868fa911746b2318cb8f08b5c6, type: 2}
-  - {fileID: 11400000, guid: a9d311cdf0856ee4182ab1dc3b1bc036, type: 2}
-  - {fileID: 11400000, guid: 0081a061ae1db3a45af8dd31207181f4, type: 2}
-  - {fileID: 11400000, guid: 240aebf19c8e95440bc669eaf0bd0bb1, type: 2}
+  AllSecondaryElements: []
 --- !u!114 &460925773
 MonoBehaviour:
   m_ObjectHideFlags: 0
