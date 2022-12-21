@@ -20,29 +20,33 @@ public class FrontFootAnimationHandler : MonoBehaviour
     public float xAxisElipse;
     public float yAxisElipse;
 
-
+    public float phase = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-
         _initialX = transform.localPosition.x;
+        
+        var volta = DOTween.To(RefreshLine,_initialX,_initialX + height, duration).SetEase(animationCurve);
         var ida = DOTween.To(Refresh,ti,tf,duration).SetEase(animationCurve);
-        var volta = transform.DOLocalMoveX(_initialX + height,duration).SetEase(animationCurve);
-
-        var sequency = DOTween.Sequence().Append(ida).Append(volta).SetLoops(-1).Play();
+        
+        var sequency = DOTween.Sequence().Append(volta).Append(ida).SetLoops(-1).Play();
     }
     
     void Refresh(float value)
     {
-        var position = new Vector2(xAxisElipse*Mathf.Cos(value), yAxisElipse*Mathf.Sin(value)) + offset;
+        var tm = _initialX + (height / 2);
+        var position = new Vector2(xAxisElipse*Mathf.Cos(value) + tm, yAxisElipse*Mathf.Sin(value)) + offset;
 
         transform.localPosition = (Vector3)position;
     }
-    // Update is called once per frame
-    void Update()
+
+    void RefreshLine(float value)
     {
-        
+        var position = new Vector2(value, 0) + offset;
+        transform.localPosition = (Vector3)position;
+
     }
 }
+
 
