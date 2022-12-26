@@ -7,8 +7,8 @@ namespace Enemies.Shooter {
     [RequireComponent(typeof(CircleCollider2D))]
     public class PlayerDetector : MonoBehaviour {
         [SerializeField] private UnityEvent<Vector2> _playerDetectedEvent;
-        [SerializeField] private float _delayInSeconds;
-        [SerializeField] private LayerMask _layerMasks;
+        [SerializeField] private float delayInSeconds;
+        [SerializeField] private LayerMask layerMasks;
         private CircleCollider2D _collider;
         private GameObject _playerInstance;
 
@@ -19,7 +19,7 @@ namespace Enemies.Shooter {
 
         private void OnTriggerEnter2D(Collider2D col) {
             if (col.gameObject == _playerInstance) {
-                StartCheckPlayerVisibilityCoroutine(_delayInSeconds);
+                StartCheckPlayerVisibilityCoroutine(delayInSeconds);
             }
         }
         
@@ -40,7 +40,7 @@ namespace Enemies.Shooter {
                 var playerPosition = _playerInstance.transform.position;
                 var direction = (playerPosition - enemyPosition).normalized;
                 
-                var raycastHit2D = Physics2D.Raycast(enemyPosition , direction, _collider.radius,_layerMasks);
+                var raycastHit2D = Physics2D.Raycast(enemyPosition , direction, _collider.radius,layerMasks);
                 
                 if (raycastHit2D && raycastHit2D.transform.gameObject == _playerInstance) {
                     _playerDetectedEvent.Invoke(direction);

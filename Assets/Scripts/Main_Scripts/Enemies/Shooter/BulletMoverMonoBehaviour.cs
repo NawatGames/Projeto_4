@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Enemies.Shooter {
     [RequireComponent(typeof(Rigidbody2D))]
-    public class BulletMonoBehaviour : MonoBehaviour {
+    public class BulletMoverMonoBehaviour : MonoBehaviour {
         [SerializeField] private float _speed;
         private Vector2 _speedDiretion;
         private Rigidbody2D _rgb;
