@@ -30,8 +30,6 @@ namespace Main_Scripts.PlataformSpawner {
          
             var vectorAngle = NormalizeAngleToFirstQuarter(Vector2.Angle(originalVector, Vector2.right));
 
-            print($"Ponto inicial: x: {initialEndPointPair.Item1.x} y: {initialEndPointPair.Item1.y}");
-            print($"Ponto final: x: {initialEndPointPair.Item2.x} y: {initialEndPointPair.Item2.y}");
             var platformGameobj = Instantiate(platformPrefab, platformPosition,
                 Quaternion.AngleAxis(CaparOAngulo(vectorAngle), Vector3.forward));
             
@@ -45,7 +43,6 @@ namespace Main_Scripts.PlataformSpawner {
         }
 
         private float NormalizeAngleToFirstQuarter(float angle) {
-            print(angle);
             if (angle <= 180) return angle;
             return 180 - angle;
         }

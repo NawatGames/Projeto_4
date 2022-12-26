@@ -19,7 +19,6 @@ namespace Main_Scripts.Platform {
         }
 
         public void Testando() {
-            print("Eita, ela decaiu mesmo");
             Destroy(gameObject);
         }
     }

@@ -10,7 +10,6 @@ namespace Main_Scripts.Platform {
             _platformElement = element;
             GetComponent<SpriteRenderer>().sprite = _platformElement.platformSprite;
             
-            print($"Inicializada com o elemento: {_platformElement.name}");
             foreach (var itemElement in _platformElement.PlatformBehavioursArray) {
                 itemElement.StartBehaviour(gameObject);
             }
@@ -29,5 +28,7 @@ namespace Main_Scripts.Platform {
                 itemElement.OnCollisionEventResponse(gameObject, col);
             }
         }
+
+        public ElementSO PlatformElement => _platformElement;
     }
 }
