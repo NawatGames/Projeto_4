@@ -29,10 +29,10 @@ namespace Main_Scripts.PlataformSpawner {
             var originalVector = initialEndPointPair.Item2 - initialEndPointPair.Item1;
             var platformPosition = initialEndPointPair.Item2 - Vector2.right * 0.5f;
          
-            var vectorAngle = NormalizeAngleToFirstQuarter(Vector2.Angle(originalVector, Vector2.right));
+            var vectorAngle = NormalizeAngle(originalVector);
 
             var platformGameobj = Instantiate(platformPrefab, platformPosition,
-                Quaternion.AngleAxis(CaparOAngulo(vectorAngle), Vector3.forward));
+                Quaternion.AngleAxis(ClampAngle(vectorAngle), Vector3.forward));
             
             platformGameobj.GetComponent<PlatformElementHandler>().Inialize(elementSelectedSingleton.Value);
             platformGameobj.GetComponent<DecaySystem>().StartDecayCoroutine();
@@ -43,12 +43,14 @@ namespace Main_Scripts.PlataformSpawner {
             }
         }
 
-        private float NormalizeAngleToFirstQuarter(float angle) {
-            if (angle <= 180) return angle;
-            return 180 - angle;
+        private float NormalizeAngle(Vector2 vector) {
+            if (vector.y > 0) 
+                return Vector2.Angle(vector, Vector2.right); //Se estiver no primeiro ou segundo quadrante
+            
+            return 180 - Vector2.Angle(vector, Vector2.right);
         }
 
-        private float CaparOAngulo(float angle){
+        private float ClampAngle(float angle){
             if (angle < 22.5) return 0f;
             if (angle >= 22.5 && angle <= 67.5) return 45f;
             if (angle > 67.5 && angle <= 90) return 90f;
