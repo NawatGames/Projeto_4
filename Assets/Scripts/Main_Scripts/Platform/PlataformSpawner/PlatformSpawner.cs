@@ -1,5 +1,6 @@
 using EventSystem;
 using EventSystem.SimpleEvents;
+using Main_Scripts.EventSystem.SimpleEvents;
 using Main_Scripts.Platform;
 using Main_Scripts.SingletonsSO;
 using UnityEngine;

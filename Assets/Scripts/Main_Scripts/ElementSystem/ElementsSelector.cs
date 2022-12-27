@@ -1,17 +1,16 @@
-using EventSystem;
+using ElementSystem;
 using EventSystem.SimpleEvents;
-using Main_Scripts.ElementSystem;
 using Main_Scripts.SingletonsSO;
 using UnityEngine;
 
-namespace ElementSystem {
+namespace Main_Scripts.ElementSystem {
     [RequireComponent(typeof(ElementGeneratorMonoBehaviour))]
     public class ElementsSelector : MonoBehaviour {
         [SerializeField] private IntegerEvent eventToListen;
         [SerializeField] private ElementSelectedSingleton elementSelectedSingleton;
 
         private ElementGeneratorMonoBehaviour _generatorMonoBehaviour;
-        private PrimeElementSO[] _currentPrimesSelectedArray = new PrimeElementSO[2];
+        private ElementSO[] _currentPrimesSelectedArray = new ElementSO[2];
         private ElementSO _currentElementSelected;
 
         private void Awake() {

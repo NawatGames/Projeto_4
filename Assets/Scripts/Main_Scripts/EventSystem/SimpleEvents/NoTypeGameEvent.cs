@@ -1,8 +1,9 @@
 using System.Collections.Generic;
+using EventSystem;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace EventSystem {
+namespace Main_Scripts.EventSystem.SimpleEvents {
     [CreateAssetMenu(fileName = "Game_Event", menuName = "simple event/Event")]
     public class NoTypeGameEvent : ScriptableObject, IGameEvent {
         private HashSet<UnityEvent> _unityEventsSet;

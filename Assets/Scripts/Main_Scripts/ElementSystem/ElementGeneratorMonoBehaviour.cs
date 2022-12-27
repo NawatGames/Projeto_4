@@ -1,3 +1,4 @@
+using Main_Scripts.ElementSystem;
 using UnityEngine;
 
 namespace ElementSystem {
@@ -12,7 +13,7 @@ namespace ElementSystem {
             _secondaryElementsContainer = GetComponent<AllSecondaryElementsContainer>();
             _generator = new ElementGenerator(ref _secondaryElementsContainer.AllSecondaryElements);
         }
-        public SecondaryElementSO CreateAElement(ref PrimeElementSO[] primeElementsArray) {
+        public SecondaryElementSO CreateAElement(ref ElementSO[] primeElementsArray) {
             return _generator.GetValueFromKey(primeElementsArray);
         }
 

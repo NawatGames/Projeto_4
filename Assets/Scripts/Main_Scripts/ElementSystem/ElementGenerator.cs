@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using ElementSystem;
+using Main_Scripts.ElementSystem;
 
 public class ElementGenerator {
     private SecondaryElementSO[] _secondaryElementsContainer;
@@ -21,7 +22,7 @@ public class ElementGenerator {
         }
     }
 
-    public SecondaryElementSO GetValueFromKey(PrimeElementSO[] primeElementsArray) {
+    public SecondaryElementSO GetValueFromKey(ElementSO[] primeElementsArray) {
         var primeElementsArrayOrdered = primeElementsArray.OrderBy(x => x.name);
         var hash = "";
         foreach (var primeElement in primeElementsArrayOrdered) {

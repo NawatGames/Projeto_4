@@ -76,9 +76,6 @@ namespace InputSystem {
                 endPoint = GetMouseWorldPosition();
                 mouseInitialAndEndPointEvent.InvokeEvent((_mouseInitialPoint, endPoint));
             }
-            
-            
-            
         }
 
         private static Vector2 GetMouseWorldPosition() {

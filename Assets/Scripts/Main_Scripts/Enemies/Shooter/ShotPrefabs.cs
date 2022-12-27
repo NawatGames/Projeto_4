@@ -1,6 +1,7 @@
 using Enemies.Shooter;
 using EventSystem;
 using Main_Scripts.ElementSystem;
+using Main_Scripts.EventSystem.SimpleEvents;
 using UnityEngine;
 
 namespace Main_Scripts.Enemies.Shooter {
