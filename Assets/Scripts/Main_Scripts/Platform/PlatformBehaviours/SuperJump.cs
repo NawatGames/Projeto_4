@@ -1,7 +1,7 @@
 using UnityEngine;
 
 namespace Main_Scripts.Platform.PlatformBehaviours {
-    [CreateAssetMenu(fileName = "Test1", menuName = "PlatformBehaviours/Test1", order = 0)]
+    [CreateAssetMenu(fileName = "Super Jump", menuName = "PlatformBehaviours/Super Jump", order = 0)]
     public class SuperJump : BaseBehaviourSO {
         public override void StartBehaviour(GameObject platformGameObject) {
         }

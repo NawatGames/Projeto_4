@@ -46,11 +46,20 @@ namespace Main_Scripts.ElementSystem {
 
             if (_currentPrimesSelectedArray[0] != null && _currentPrimesSelectedArray[1] == null) {
                 _currentPrimesSelectedArray[1] = _generatorMonoBehaviour.AllPrimeElementsArray[index];
-                _currentElementSelected = _generatorMonoBehaviour.CreateAElement(ref _currentPrimesSelectedArray);
-                
-                CleanSelectedArray();
-                elementSelectedSingleton.Value = _currentElementSelected;
-                _currentPrimesSelectedArray[0] = _currentElementSelected;
+
+               var elementCreated = _generatorMonoBehaviour.CreateAElement(ref _currentPrimesSelectedArray);
+               if (elementCreated == null) {
+                   _currentElementSelected = _currentPrimesSelectedArray[1];
+                   CleanSelectedArray();
+                   _currentPrimesSelectedArray[0] = _currentElementSelected;
+                   elementSelectedSingleton.Value = _currentElementSelected;
+                   return;
+               }
+
+               _currentElementSelected = elementCreated;
+               CleanSelectedArray();
+               _currentPrimesSelectedArray[0] = elementCreated;
+               elementSelectedSingleton.Value = _currentElementSelected;
             }
 
         }

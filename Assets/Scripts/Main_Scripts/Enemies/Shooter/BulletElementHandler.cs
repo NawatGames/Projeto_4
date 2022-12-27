@@ -23,7 +23,7 @@ namespace Main_Scripts.Enemies.Shooter {
         private void OnTriggerEnter2D(Collider2D col) {
             if (col.CompareTag("Platform")) {
                 var platformElement = col.gameObject.GetComponent<PlatformElementHandler>().PlatformElement;
-                if (platformElement == _bulletElement.opositeElement) {
+                if (platformElement == _bulletElement.elementToLoseFor) {
                     Destroy(gameObject);
                     eventToTrigger.InvokeEvent();
                 }

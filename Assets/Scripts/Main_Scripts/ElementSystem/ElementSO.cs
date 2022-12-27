@@ -7,6 +7,6 @@ namespace Main_Scripts.ElementSystem {
         public Sprite platformSprite;
         
         public Sprite bulletSprite;
-        public ElementSO opositeElement;
+        public ElementSO elementToLoseFor;
     }
 }

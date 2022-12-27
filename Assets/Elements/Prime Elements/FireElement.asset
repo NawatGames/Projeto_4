@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlatformBehavioursArray:
   - {fileID: 11400000, guid: 3afefc0d6c22f80449656896267956ea, type: 2}
-  - {fileID: 11400000, guid: 37761e75da89c5046a85768e5e1896d2, type: 2}
+  - {fileID: 11400000, guid: 9392f54ade935d7419e563660c012659, type: 2}
   platformSprite: {fileID: 21300000, guid: 008620e8ffe6ad44781d2bfcb5f80d6d, type: 3}
   bulletSprite: {fileID: 21300000, guid: 008620e8ffe6ad44781d2bfcb5f80d6d, type: 3}
-  opositeElement: {fileID: 11400000, guid: ebcc9686690f6e04f8ffae25d1f7ff26, type: 2}
+  elementToLoseFor: {fileID: 11400000, guid: ebcc9686690f6e04f8ffae25d1f7ff26, type: 2}

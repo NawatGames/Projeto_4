@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 503555288663421eb9161f3d376d3079, type: 3}
   m_Name: AirElement
   m_EditorClassIdentifier: 
-  PlatformBehavioursArray:
-  - {fileID: 11400000, guid: 37761e75da89c5046a85768e5e1896d2, type: 2}
-  platformSprite: {fileID: 21300000, guid: 008620e8ffe6ad44781d2bfcb5f80d6d, type: 3}
+  PlatformBehavioursArray: []
+  platformSprite: {fileID: 21300000, guid: f9f2a6c3e2f3e8b4fa20abbcaae190d6, type: 3}
+  bulletSprite: {fileID: 21300000, guid: f9f2a6c3e2f3e8b4fa20abbcaae190d6, type: 3}
+  elementToLoseFor: {fileID: 11400000, guid: 9d558f646751c6d4a8f2fe1db51f1b85, type: 2}
