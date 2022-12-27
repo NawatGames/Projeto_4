@@ -27,7 +27,7 @@ namespace Main_Scripts.PlataformSpawner {
                 return;
            
             var originalVector = initialEndPointPair.Item2 - initialEndPointPair.Item1;
-            var platformPosition = initialEndPointPair.Item2 - Vector2.right * 0.5f;
+            var platformPosition = initialEndPointPair.Item2 - Vector2.right * initialEndPointPair.Item2.x * 0.5f;
          
             var vectorAngle = NormalizeAngle(originalVector);
 
