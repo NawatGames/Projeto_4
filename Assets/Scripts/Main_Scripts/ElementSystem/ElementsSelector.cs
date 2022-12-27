@@ -47,11 +47,10 @@ namespace Main_Scripts.ElementSystem {
             if (_currentPrimesSelectedArray[0] != null && _currentPrimesSelectedArray[1] == null) {
                 _currentPrimesSelectedArray[1] = _generatorMonoBehaviour.AllPrimeElementsArray[index];
                 _currentElementSelected = _generatorMonoBehaviour.CreateAElement(ref _currentPrimesSelectedArray);
-
+                
                 CleanSelectedArray();
                 elementSelectedSingleton.Value = _currentElementSelected;
-
-                return;
+                _currentPrimesSelectedArray[0] = _currentElementSelected;
             }
 
         }

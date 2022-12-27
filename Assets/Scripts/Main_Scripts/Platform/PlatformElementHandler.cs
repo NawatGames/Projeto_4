@@ -12,21 +12,21 @@ namespace Main_Scripts.Platform {
             GetComponent<SpriteRenderer>().sprite = _platformElement.platformSprite;
             
             foreach (var itemElement in _platformElement.PlatformBehavioursArray) {
-                itemElement.StartBehaviour(gameObject);
+                itemElement?.StartBehaviour(gameObject);
             }
             
         }
 
         private void Update() {   
             foreach (var itemElement in _platformElement.PlatformBehavioursArray) {
-                itemElement.UpdateBehaviour(gameObject);
+                itemElement?.UpdateBehaviour(gameObject);
             }
         }
 
 
         private void OnCollisionEnter2D(Collision2D col) {
             foreach (var itemElement in _platformElement.PlatformBehavioursArray) {
-                itemElement.OnCollisionEventResponse(gameObject, col);
+                itemElement?.OnCollisionEventResponse(gameObject, col);
             }
         }
 

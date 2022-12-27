@@ -475,6 +475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllSecondaryElements:
   - {fileID: 11400000, guid: 3df105866a755ba4fb603811179bb4dc, type: 2}
+  - {fileID: 11400000, guid: 17032ed5c302b4744ad8b4047ac0ca9b, type: 2}
 --- !u!114 &460925773
 MonoBehaviour:
   m_ObjectHideFlags: 0
