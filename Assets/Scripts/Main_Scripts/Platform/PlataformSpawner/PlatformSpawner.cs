@@ -36,6 +36,9 @@ namespace Main_Scripts.PlataformSpawner {
             
             platformGameobj.GetComponent<PlatformElementHandler>().Inialize(elementSelectedSingleton.Value);
             platformGameobj.GetComponent<DecaySystem>().StartDecayCoroutine();
+
+            if (ClampAngle(vectorAngle) == 90f)
+                platformGameobj.GetComponent<PlatformEffector2D>().enabled = false;
             
             if(_cleanElementSelectionOnSpawn) {
                 elementSelectedSingleton.Value = null;
@@ -55,9 +58,9 @@ namespace Main_Scripts.PlataformSpawner {
             if (angle >= 22.5 && angle <= 67.5) return 45f;
             if (angle > 67.5 && angle <= 90) return 90f;
             if (angle < 112.5 && angle >= 90) return 90f;
-            if (angle >= 112.5 && angle <= 157.5) return 135f;
+            if (angle >= 112.5 && angle <= 157.5) return 315f;
              
-            return 180;
+            return 0;
         }
         
     }
