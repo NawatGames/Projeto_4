@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f51d3d2d1142798cd35247e20ee582, type: 3}
   m_Name: FireGlass
   m_EditorClassIdentifier: 
-  PlatformBehavioursArray: []
+  PlatformBehavioursArray:
+  - {fileID: 11400000, guid: 73a49f1ba32fc2e4397566dbb48e91f0, type: 2}
+  - {fileID: 11400000, guid: 32361326c4e335948a12d1f255a43547, type: 2}
   platformSprite: {fileID: 21300000, guid: 008620e8ffe6ad44781d2bfcb5f80d6d, type: 3}
   bulletSprite: {fileID: 0}
   opositeElement: {fileID: 0}

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Main_Scripts.Platform.PlatformBehaviours {
     [CreateAssetMenu(fileName = "Test1", menuName = "PlatformBehaviours/Test1", order = 0)]
-    public class TestBehaviour1 : BaseBehaviourSO {
+    public class SuperJump : BaseBehaviourSO {
         public override void StartBehaviour(GameObject platformGameObject) {
         }
 
@@ -14,6 +14,9 @@ namespace Main_Scripts.Platform.PlatformBehaviours {
 
             var rgb = other.gameObject.GetComponent<Rigidbody2D>();
             rgb.AddForce(Vector2.up * 1000, ForceMode2D.Force);
+        }
+
+        public override void OnTriggerEventResponse(GameObject platformGameObject, Collider2D  other) {
         }
     }
 }

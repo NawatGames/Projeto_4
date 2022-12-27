@@ -1,9 +1,8 @@
-using System;
 using UnityEngine;
 
 namespace Main_Scripts.Platform.PlatformBehaviours {
     [CreateAssetMenu(fileName = "Test2", menuName = "PlatformBehaviours/Test2", order = 0)]
-    public class TestBehaviour2 : BaseBehaviourSO {
+    public class Print : BaseBehaviourSO {
         public override void StartBehaviour(GameObject platformGameObject) {
         }
 
@@ -12,6 +11,9 @@ namespace Main_Scripts.Platform.PlatformBehaviours {
 
         public override void OnCollisionEventResponse(GameObject platformGameObject, Collision2D other) {
             Debug.Log("Poxa, vc bateu na plataforma :(");
+        }
+
+        public override void OnTriggerEventResponse(GameObject platformGameObject, Collider2D other) {
         }
     }
 }

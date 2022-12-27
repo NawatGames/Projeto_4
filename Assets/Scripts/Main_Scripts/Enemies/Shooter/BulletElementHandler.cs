@@ -16,6 +16,10 @@ namespace Main_Scripts.Enemies.Shooter {
             eventToTrigger = eventBulletDestroyed;
         }
 
+        public void ChangeElement(ElementSO elementSo) {
+            _bulletElement = elementSo;
+            GetComponent<SpriteRenderer>().sprite = _bulletElement.bulletSprite;
+        }
         private void OnTriggerEnter2D(Collider2D col) {
             if (col.CompareTag("Platform")) {
                 var platformElement = col.gameObject.GetComponent<PlatformElementHandler>().PlatformElement;

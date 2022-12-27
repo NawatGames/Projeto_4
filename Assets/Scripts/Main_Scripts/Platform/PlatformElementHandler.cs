@@ -1,5 +1,3 @@
-using System;
-using ElementSystem;
 using Main_Scripts.ElementSystem;
 using UnityEngine;
 
@@ -27,6 +25,12 @@ namespace Main_Scripts.Platform {
         private void OnCollisionEnter2D(Collision2D col) {
             foreach (var itemElement in _platformElement.PlatformBehavioursArray) {
                 itemElement?.OnCollisionEventResponse(gameObject, col);
+            }
+        }
+
+        private void OnTriggerEnter2D(Collider2D col) {
+            foreach (var itemElement in _platformElement.PlatformBehavioursArray) {
+                itemElement?.OnTriggerEventResponse(gameObject, col);
             }
         }
 
