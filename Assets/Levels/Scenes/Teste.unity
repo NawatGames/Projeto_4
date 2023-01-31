@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f2614f0e0e85cb43a4a7d5547114ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimationState: 
+  AnimationState: Running
   duration: 0.3
   animationCurve:
     serializedVersion: 2
@@ -1338,7 +1338,7 @@ MonoBehaviour:
   movementVerifier: {fileID: 1757193013}
   jumpSpeed: 7.5
   inputDirection: {x: 0, y: 0}
-  walkSpeed: 2.5
+  walkSpeed: 8.47
   movementDirectionEvent: {fileID: 11400000, guid: 5c570183a46c3fd4790a4d5463eb4f1b, type: 2}
   jumpChangedEvent: {fileID: 11400000, guid: 6f201f6fb75d2734796dd122051e5f43, type: 2}
 --- !u!114 &1757193010
@@ -1794,7 +1794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f2614f0e0e85cb43a4a7d5547114ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimationState: 
+  AnimationState: Idle
   duration: 0.5
   animationCurve:
     serializedVersion: 2
@@ -1889,7 +1889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f2614f0e0e85cb43a4a7d5547114ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimationState: 
+  AnimationState: Running
   duration: 0.3
   animationCurve:
     serializedVersion: 2
