@@ -12,3 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 503555288663421eb9161f3d376d3079, type: 3}
   m_Name: WaterElement
   m_EditorClassIdentifier: 
+  PlatformBehavioursArray:
+  - {fileID: 11400000, guid: 3afefc0d6c22f80449656896267956ea, type: 2}
+  - {fileID: 11400000, guid: 9392f54ade935d7419e563660c012659, type: 2}
+  platformSprite: {fileID: 21300000, guid: b4161b862a6bb054095f2f83f06e2897, type: 3}
+  bulletSprite: {fileID: 21300000, guid: b4161b862a6bb054095f2f83f06e2897, type: 3}
+  elementToLoseFor: {fileID: 11400000, guid: 941a82e5f47f6c94089fe8638a25a346, type: 2}
