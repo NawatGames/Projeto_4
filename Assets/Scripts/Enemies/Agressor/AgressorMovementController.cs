@@ -7,15 +7,14 @@ namespace Enemies.Agressor {
         [SerializeField] private float _speedPatrolMode;
         [SerializeField] private float _speedChaseMode;
         [SerializeField] private float _visionDistance;
-        
-        private BoxCollider2D _collider2D;
+
+        [SerializeField] private BoxCollider2D _collider2D;
         private CharacterMovementHandler _movementHandler;
         private Vector2 _currentDirection = Vector2.right;
         private float _currentSpeed;
 
         private void Awake() {
             _movementHandler = GetComponent<CharacterMovementHandler>();
-            _collider2D = GetComponent<BoxCollider2D>();
             _currentSpeed = _speedPatrolMode;
         }
 
