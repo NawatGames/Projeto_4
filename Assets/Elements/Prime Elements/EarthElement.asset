@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EarthElement
   m_EditorClassIdentifier: 
   PlatformBehavioursArray: []
-  platformSprites:
+  platformIdleSprites:
   - {fileID: 21300000, guid: 6990ae47aaab8de4999a5098ba49595a, type: 3}
   - {fileID: 21300000, guid: eb4aa0fa24b20d64295f1680c20abbce, type: 3}
   - {fileID: 21300000, guid: 5150968fb57766e42b61afa62a218d67, type: 3}
@@ -21,5 +21,22 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 59701c5389c72cf49aae448115fa6434, type: 3}
   - {fileID: 21300000, guid: 2180070381a6247458fdea22e7093961, type: 3}
   - {fileID: 21300000, guid: bcd27b5fccb9cfe42b017245c58a4180, type: 3}
+  platformSpawnSprites:
+  - {fileID: 21300000, guid: 70bcdfcc45d3c8f4091f70744e4d62d8, type: 3}
+  - {fileID: 21300000, guid: a31ff546b132a1f4bbf06016ce7cf63e, type: 3}
+  - {fileID: 21300000, guid: 025e9df87a4b2dc4cac181b5f55a3cb8, type: 3}
+  - {fileID: 21300000, guid: ee89405166f3722439ffe99c925f788f, type: 3}
+  - {fileID: 21300000, guid: 041ab9e582b1647429b38aa81ced78c9, type: 3}
+  - {fileID: 21300000, guid: 3c7a3117263483e47a914050132d0783, type: 3}
+  - {fileID: 21300000, guid: c6df6c697efa0a544889668db55e84b6, type: 3}
+  - {fileID: 21300000, guid: edd995c012d315f47ba85d17b9d9279b, type: 3}
+  - {fileID: 21300000, guid: 6f32420de0f687a4fb3050a412560655, type: 3}
+  - {fileID: 21300000, guid: d47b09f2355772642acfd5c51c510d9a, type: 3}
+  - {fileID: 21300000, guid: aae554dc5b5db634cb57ed0492da1874, type: 3}
+  - {fileID: 21300000, guid: e1390da964c8b5d41beec6858508993b, type: 3}
+  - {fileID: 21300000, guid: bf941d76923f4b74eb157bf5c43a4d27, type: 3}
+  - {fileID: 21300000, guid: 9ee60d016fe27b94da5600f2a4b7ae73, type: 3}
+  - {fileID: 21300000, guid: c8b4ad3aa00916541b93bf1086c28622, type: 3}
+  - {fileID: 21300000, guid: 74dae7690be39ca4093a33c47154cfac, type: 3}
   bulletSprite: {fileID: 21300000, guid: 63d4a3499201edd4187985271c73f422, type: 3}
   elementToLoseFor: {fileID: 0}

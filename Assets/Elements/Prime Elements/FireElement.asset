@@ -15,12 +15,30 @@ MonoBehaviour:
   PlatformBehavioursArray:
   - {fileID: 11400000, guid: 3afefc0d6c22f80449656896267956ea, type: 2}
   - {fileID: 11400000, guid: 9392f54ade935d7419e563660c012659, type: 2}
-  platformSprites:
+  platformIdleSprites:
   - {fileID: 21300000, guid: 5a1c99ac5410a594d94429661c13a501, type: 3}
   - {fileID: 21300000, guid: cd65298cec89830489df3cb1118fa824, type: 3}
   - {fileID: 21300000, guid: ccd784460142c454cbe1bd4760c196a4, type: 3}
   - {fileID: 21300000, guid: f4ef55284dbac97419706dc5f520b60e, type: 3}
+  - {fileID: 21300000, guid: c9a5090320022394d9a7a011cb61dba4, type: 3}
   - {fileID: 21300000, guid: 7646e081b8c795a44a9bc841694c4fef, type: 3}
-  - {fileID: 21300000, guid: 7646e081b8c795a44a9bc841694c4fef, type: 3}
+  platformSpawnSprites:
+  - {fileID: 21300000, guid: 9c35ddb4cdf4fe74ba13b70b55085864, type: 3}
+  - {fileID: 21300000, guid: db7aaf12feafbb4469f1f3e5e690135d, type: 3}
+  - {fileID: 21300000, guid: 3022673e6cfa47d429dd777a099011e1, type: 3}
+  - {fileID: 21300000, guid: a356ac4be9fb1aa45bbef7663d76ea4e, type: 3}
+  - {fileID: 21300000, guid: 56e62e00017c11a4f9f29d9394501d23, type: 3}
+  - {fileID: 21300000, guid: 6f575e422f3b39641bf4d5d488e09464, type: 3}
+  - {fileID: 21300000, guid: b897d77c1e4bd2f4c90564fff1872c10, type: 3}
+  - {fileID: 21300000, guid: e40bdd8b2b52d6a4986727299072a099, type: 3}
+  - {fileID: 21300000, guid: f1c98e8fa8f6bcc43bce04943d35374a, type: 3}
+  - {fileID: 21300000, guid: 29804c3096d076c4985518bd8c43456f, type: 3}
+  - {fileID: 21300000, guid: e7b18903bdae7de45bdcf431a0f4885d, type: 3}
+  - {fileID: 21300000, guid: 9db5d65fcc30095409cc15b6674e9baf, type: 3}
+  - {fileID: 21300000, guid: 6d2e6891f120e3146a190d10b32698a1, type: 3}
+  - {fileID: 21300000, guid: fd5bc561cf885c54a9501c11407b19d6, type: 3}
+  - {fileID: 21300000, guid: b099634b42a8c684da7c1a469fa39a58, type: 3}
+  - {fileID: 21300000, guid: adeeaee3c69d38f45a9a02ff8a31b374, type: 3}
+  - {fileID: 21300000, guid: 99d11c75018eb3c48a8eab5b955e14a4, type: 3}
   bulletSprite: {fileID: 21300000, guid: 008620e8ffe6ad44781d2bfcb5f80d6d, type: 3}
   elementToLoseFor: {fileID: 11400000, guid: ebcc9686690f6e04f8ffae25d1f7ff26, type: 2}
