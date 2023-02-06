@@ -7,7 +7,7 @@ namespace Main_Scripts.Platform {
 
         public void Inialize(ElementSO element) {
             _platformElement = element;
-            GetComponent<SpriteRenderer>().sprite = _platformElement.platformSprites[0];
+            GetComponent<SpriteRenderer>().sprite = _platformElement.platformIdleSprites[0];
             
             foreach (var itemElement in _platformElement.PlatformBehavioursArray) {
                 itemElement?.StartBehaviour(gameObject);
