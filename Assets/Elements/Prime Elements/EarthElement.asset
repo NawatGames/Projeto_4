@@ -13,6 +13,13 @@ MonoBehaviour:
   m_Name: EarthElement
   m_EditorClassIdentifier: 
   PlatformBehavioursArray: []
-  platformSprite: {fileID: 21300000, guid: 63d4a3499201edd4187985271c73f422, type: 3}
+  platformSprites:
+  - {fileID: 21300000, guid: 6990ae47aaab8de4999a5098ba49595a, type: 3}
+  - {fileID: 21300000, guid: eb4aa0fa24b20d64295f1680c20abbce, type: 3}
+  - {fileID: 21300000, guid: 5150968fb57766e42b61afa62a218d67, type: 3}
+  - {fileID: 21300000, guid: 6e1f95ce28476214aad07d1d78668365, type: 3}
+  - {fileID: 21300000, guid: 59701c5389c72cf49aae448115fa6434, type: 3}
+  - {fileID: 21300000, guid: 2180070381a6247458fdea22e7093961, type: 3}
+  - {fileID: 21300000, guid: bcd27b5fccb9cfe42b017245c58a4180, type: 3}
   bulletSprite: {fileID: 21300000, guid: 63d4a3499201edd4187985271c73f422, type: 3}
   elementToLoseFor: {fileID: 0}

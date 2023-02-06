@@ -15,6 +15,12 @@ MonoBehaviour:
   PlatformBehavioursArray:
   - {fileID: 11400000, guid: 3afefc0d6c22f80449656896267956ea, type: 2}
   - {fileID: 11400000, guid: 9392f54ade935d7419e563660c012659, type: 2}
-  platformSprite: {fileID: 21300000, guid: 008620e8ffe6ad44781d2bfcb5f80d6d, type: 3}
+  platformSprites:
+  - {fileID: 21300000, guid: 5a1c99ac5410a594d94429661c13a501, type: 3}
+  - {fileID: 21300000, guid: cd65298cec89830489df3cb1118fa824, type: 3}
+  - {fileID: 21300000, guid: ccd784460142c454cbe1bd4760c196a4, type: 3}
+  - {fileID: 21300000, guid: f4ef55284dbac97419706dc5f520b60e, type: 3}
+  - {fileID: 21300000, guid: 7646e081b8c795a44a9bc841694c4fef, type: 3}
+  - {fileID: 21300000, guid: 7646e081b8c795a44a9bc841694c4fef, type: 3}
   bulletSprite: {fileID: 21300000, guid: 008620e8ffe6ad44781d2bfcb5f80d6d, type: 3}
   elementToLoseFor: {fileID: 11400000, guid: ebcc9686690f6e04f8ffae25d1f7ff26, type: 2}
