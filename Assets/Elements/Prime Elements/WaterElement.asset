@@ -15,38 +15,6 @@ MonoBehaviour:
   PlatformBehavioursArray:
   - {fileID: 11400000, guid: 3afefc0d6c22f80449656896267956ea, type: 2}
   - {fileID: 11400000, guid: 9392f54ade935d7419e563660c012659, type: 2}
-  platformIdleSprites:
-  - {fileID: 21300000, guid: f43996b8b87bcbd4ea27f5c7d6245571, type: 3}
-  - {fileID: 21300000, guid: 2bed4e0322f3c3f4b904e33c0f2b8395, type: 3}
-  - {fileID: 21300000, guid: 11b03a0e0176e7144872538007e98c32, type: 3}
-  - {fileID: 21300000, guid: 1d31dce8fbd91be428acd044bb367be1, type: 3}
-  - {fileID: 21300000, guid: 9e9d59c27aee7d4439118687d2319f61, type: 3}
-  platformSpawnSprites:
-  - {fileID: 21300000, guid: 08e9024df4a189b4ba9c4b0f8d07ff84, type: 3}
-  - {fileID: 21300000, guid: 66fe5df198f9ce742b848bf10ec02316, type: 3}
-  - {fileID: 21300000, guid: b2ddd8397c0e0e24e87e39d6738afd4a, type: 3}
-  - {fileID: 21300000, guid: 690c124a32ebace43a96c06f3a0a97e6, type: 3}
-  - {fileID: 21300000, guid: a9842f51cd2ca8b44a0f4b33c7e863e3, type: 3}
-  - {fileID: 21300000, guid: d934b79e197e3ef40bc92e082bf14849, type: 3}
-  - {fileID: 21300000, guid: 6b8b253a5a0ab82408dbb587f4e43a0f, type: 3}
-  - {fileID: 21300000, guid: 609d44a0fc743e840bef452e2aa9f512, type: 3}
-  - {fileID: 21300000, guid: f6bf62f2632681f4091107a16b57222b, type: 3}
-  - {fileID: 21300000, guid: 197ff28e17eee094999f007acea01ce5, type: 3}
-  - {fileID: 21300000, guid: ebc5da42bf2ef794fbe81d3e1df00a72, type: 3}
-  - {fileID: 21300000, guid: 8681bbf9985ac03418382e75b7fea949, type: 3}
-  - {fileID: 21300000, guid: 5ce360ceb21c0d549a226c9a952a8325, type: 3}
-  - {fileID: 21300000, guid: 77aca55166f195e43b9673ea641a87c6, type: 3}
-  - {fileID: 21300000, guid: e53e521b2a16b504aa0ea398f729da84, type: 3}
-  - {fileID: 21300000, guid: 94723b236f083714088edc6c7f57db8b, type: 3}
-  - {fileID: 21300000, guid: f92b1b9669c0a984788c569d5004d56b, type: 3}
-  - {fileID: 21300000, guid: 5534216b3c1e3574e8ce460884556d97, type: 3}
-  - {fileID: 21300000, guid: 202e448a91c177648877d58ccc6c4631, type: 3}
-  - {fileID: 21300000, guid: 1f14e0ed8ac40b94bb93afd3fdb58060, type: 3}
-  - {fileID: 21300000, guid: 3c97d29440e3f88448b70a825a95af9b, type: 3}
-  - {fileID: 21300000, guid: f7aa40a0ecf71904099c34251c869904, type: 3}
-  - {fileID: 21300000, guid: d551a8ca970985746aabbe6cdf982734, type: 3}
-  - {fileID: 21300000, guid: d5c8f10de1f65394f9e6b07bad8c62bf, type: 3}
-  - {fileID: 21300000, guid: 554198e4b09ffd044b881bc20d1bd626, type: 3}
-  - {fileID: 21300000, guid: 509de1c28e153194f83f1a38713e0648, type: 3}
+  platformInitialSprite: {fileID: 21300000, guid: 08e9024df4a189b4ba9c4b0f8d07ff84, type: 3}
   bulletSprite: {fileID: 21300000, guid: b4161b862a6bb054095f2f83f06e2897, type: 3}
   elementToLoseFor: {fileID: 11400000, guid: 941a82e5f47f6c94089fe8638a25a346, type: 2}

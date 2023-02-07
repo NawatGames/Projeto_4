@@ -14,10 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlatformBehavioursArray:
   - {fileID: 11400000, guid: 73a49f1ba32fc2e4397566dbb48e91f0, type: 2}
-  platformIdleSprites:
-  - {fileID: 21300000, guid: 6ec23bf6c6bb0cd4e91fbf5ca221228f, type: 3}
-  platformSpawnSprites:
-  - {fileID: 21300000, guid: 6ec23bf6c6bb0cd4e91fbf5ca221228f, type: 3}
+  platformInitialSprite: {fileID: 21300000, guid: 99f5c7b9f3a908e42a5d9d655dffd208, type: 3}
   bulletSprite: {fileID: 21300000, guid: 008620e8ffe6ad44781d2bfcb5f80d6d, type: 3}
   elementToLoseFor: {fileID: 0}
   _primeElementsComposerArray:
