@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4468691726264630391}
   - component: {fileID: 6643738334485849105}
   - component: {fileID: 6964635949282641772}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Movement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 3781744232045412356}
   - component: {fileID: 6359827145104437910}
   - component: {fileID: 298987893616145960}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Agressor
   m_TagString: Aggressor
   m_Icon: {fileID: 0}
