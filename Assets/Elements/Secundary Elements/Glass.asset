@@ -17,6 +17,7 @@ MonoBehaviour:
   platformInitialSprite: {fileID: 21300000, guid: 99f5c7b9f3a908e42a5d9d655dffd208, type: 3}
   bulletSprite: {fileID: 21300000, guid: 008620e8ffe6ad44781d2bfcb5f80d6d, type: 3}
   elementToLoseFor: {fileID: 0}
+  elementAnimationNumber: 1
   _primeElementsComposerArray:
   - {fileID: 11400000, guid: 9d558f646751c6d4a8f2fe1db51f1b85, type: 2}
   - {fileID: 11400000, guid: 3004f2cfd70791640a4eec5b93e4595e, type: 2}

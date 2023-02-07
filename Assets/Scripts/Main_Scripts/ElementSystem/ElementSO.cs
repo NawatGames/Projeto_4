@@ -7,5 +7,6 @@ namespace Main_Scripts.ElementSystem {
         public Sprite platformInitialSprite;
         public Sprite bulletSprite;
         public ElementSO elementToLoseFor;
+        public int elementAnimationNumber;
     }
 }
