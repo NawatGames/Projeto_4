@@ -527,7 +527,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4876299441920557368, guid: 93784db76eb70b84081820cdf8962457, type: 3}
       propertyPath: AllSecondaryElements.Array.size
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4876299441920557368, guid: 93784db76eb70b84081820cdf8962457, type: 3}
       propertyPath: AllSecondaryElements.Array.data[2]
