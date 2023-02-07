@@ -1,46 +1,50 @@
-using EventSystem;
 using Main_Scripts.EventSystem.SimpleEvents;
 using UnityEngine;
 
 namespace HealthSystem {
     public class HealthSystem : MonoBehaviour, IHealthSystem {
+        [SerializeField] private int maxHealth = 100;
+        [SerializeField] private int minHealth = 0;
         [SerializeField] private int currentHealth;
-        [SerializeField] private int maxHealth;
         public bool canTakeDamage = true;
 
         [Header("Events")]
-        [SerializeField] private NoTypeGameEvent damageAppliedEvent;
+        [SerializeField] private NoTypeGameEvent tookDamageEvent;
         [SerializeField] private NoTypeGameEvent diedEvent;
-        [SerializeField] private NoTypeGameEvent healthCuredEvent;
+        [SerializeField] private NoTypeGameEvent curedHealthEvent;
+        [SerializeField] private NoTypeGameEvent tookDamageWhileInvincibleEvent;
         
         private void Awake() {
             currentHealth = maxHealth;
         }
 
-        public void SetCurrentHealth(int newValue) {
-            currentHealth = newValue;
-            currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        public void SetCurrentHealth(int newHealthValue) {
+            currentHealth = newHealthValue;
+            currentHealth = Mathf.Clamp(currentHealth, minHealth, maxHealth);
         }
 
         public void CureHealth(int cureAmount) {        
             SetCurrentHealth(currentHealth + cureAmount);
-            healthCuredEvent.InvokeEvent();
+            curedHealthEvent?.InvokeEvent();
         }
 
         public void ApplyDamage(int damageToApply) {
             if (canTakeDamage)
             {
                 SetCurrentHealth(currentHealth - damageToApply);
-
                 if (currentHealth <= 0) {
-                    diedEvent.InvokeEvent();
+                    diedEvent?.InvokeEvent();
                     return;
                 }
-                damageAppliedEvent.InvokeEvent();
+                tookDamageEvent?.InvokeEvent();
             }
+            else tookDamageWhileInvincibleEvent?.InvokeEvent();
         }
 
+        // Interface stuff
         public int CurrentHealth => currentHealth;
         public int MaxHealth => maxHealth;
+        int IHealthSystem.MinHealth => minHealth;
+        bool IHealthSystem.CanTakeDamage => canTakeDamage;
     }
 }
