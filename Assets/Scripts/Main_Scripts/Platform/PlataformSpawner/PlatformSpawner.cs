@@ -11,6 +11,7 @@ namespace Main_Scripts.PlataformSpawner {
         [SerializeField] private GameObject platformPrefab;
         [SerializeField] private ElementSelectedSingleton elementSelectedSingleton;
         [SerializeField] private NoTypeGameEvent SpawnEvent;
+        [SerializeField] private AnimatePlatformEvent AnimateEvent;
         
         [Header("Designers, decidam isso")]
         [SerializeField] private bool _cleanElementSelectionOnSpawn;
@@ -44,6 +45,8 @@ namespace Main_Scripts.PlataformSpawner {
                 elementSelectedSingleton.Value = null;
                 SpawnEvent.InvokeEvent();
             }
+
+            AnimateEvent?.InvokeEvent(elementSelectedSingleton.Value.elementAnimationNumber);
         }
 
         private float NormalizeAngle(Vector2 vector) {
