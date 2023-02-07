@@ -65,6 +65,10 @@ namespace InputSystem {
                 elementSelectedEvent.InvokeEvent(4);
         }
 
+        public void OnElement5(InputAction.CallbackContext context) {
+            if(context.performed)
+                elementSelectedEvent.InvokeEvent(5);
+        }
 
         public void OnLeftClick(InputAction.CallbackContext context) {
             Vector2 endPoint;

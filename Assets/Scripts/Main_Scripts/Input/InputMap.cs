@@ -154,6 +154,15 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Element5"",
+                    ""type"": ""Button"",
+                    ""id"": ""10d2f788-5c89-4296-b43d-673834cfed31"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -200,6 +209,17 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                     ""action"": ""Element4"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b324eb50-9a12-45e7-89d1-18c0d727c874"",
+                    ""path"": ""<Keyboard>/5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Element5"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -244,6 +264,7 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
         m_ElementSelection_Element2 = m_ElementSelection.FindAction("Element2", throwIfNotFound: true);
         m_ElementSelection_Element3 = m_ElementSelection.FindAction("Element3", throwIfNotFound: true);
         m_ElementSelection_Element4 = m_ElementSelection.FindAction("Element4", throwIfNotFound: true);
+        m_ElementSelection_Element5 = m_ElementSelection.FindAction("Element5", throwIfNotFound: true);
         // DrawingMouse
         m_DrawingMouse = asset.FindActionMap("DrawingMouse", throwIfNotFound: true);
         m_DrawingMouse_LeftClick = m_DrawingMouse.FindAction("LeftClick", throwIfNotFound: true);
@@ -351,6 +372,7 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
     private readonly InputAction m_ElementSelection_Element2;
     private readonly InputAction m_ElementSelection_Element3;
     private readonly InputAction m_ElementSelection_Element4;
+    private readonly InputAction m_ElementSelection_Element5;
     public struct ElementSelectionActions
     {
         private @InputMap m_Wrapper;
@@ -359,6 +381,7 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
         public InputAction @Element2 => m_Wrapper.m_ElementSelection_Element2;
         public InputAction @Element3 => m_Wrapper.m_ElementSelection_Element3;
         public InputAction @Element4 => m_Wrapper.m_ElementSelection_Element4;
+        public InputAction @Element5 => m_Wrapper.m_ElementSelection_Element5;
         public InputActionMap Get() { return m_Wrapper.m_ElementSelection; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -380,6 +403,9 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                 @Element4.started -= m_Wrapper.m_ElementSelectionActionsCallbackInterface.OnElement4;
                 @Element4.performed -= m_Wrapper.m_ElementSelectionActionsCallbackInterface.OnElement4;
                 @Element4.canceled -= m_Wrapper.m_ElementSelectionActionsCallbackInterface.OnElement4;
+                @Element5.started -= m_Wrapper.m_ElementSelectionActionsCallbackInterface.OnElement5;
+                @Element5.performed -= m_Wrapper.m_ElementSelectionActionsCallbackInterface.OnElement5;
+                @Element5.canceled -= m_Wrapper.m_ElementSelectionActionsCallbackInterface.OnElement5;
             }
             m_Wrapper.m_ElementSelectionActionsCallbackInterface = instance;
             if (instance != null)
@@ -396,6 +422,9 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                 @Element4.started += instance.OnElement4;
                 @Element4.performed += instance.OnElement4;
                 @Element4.canceled += instance.OnElement4;
+                @Element5.started += instance.OnElement5;
+                @Element5.performed += instance.OnElement5;
+                @Element5.canceled += instance.OnElement5;
             }
         }
     }
@@ -444,6 +473,7 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
         void OnElement2(InputAction.CallbackContext context);
         void OnElement3(InputAction.CallbackContext context);
         void OnElement4(InputAction.CallbackContext context);
+        void OnElement5(InputAction.CallbackContext context);
     }
     public interface IDrawingMouseActions
     {
