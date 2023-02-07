@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5907115533623019736}
   m_Layer: 7
   m_Name: Atirador
-  m_TagString: Untagged
+  m_TagString: Shooter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,3 +148,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabToShoot: {fileID: 8019405048914347988, guid: 31ba38a04ddcc5842bc61b66bc107f27, type: 3}
   bulletElementToShot: {fileID: 11400000, guid: 9d558f646751c6d4a8f2fe1db51f1b85, type: 2}
+  bulletDestroyedEvent: {fileID: 0}

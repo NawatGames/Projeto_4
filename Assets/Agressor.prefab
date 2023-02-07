@@ -65,6 +65,7 @@ MonoBehaviour:
   _speedPatrolMode: 1
   _speedChaseMode: 1.5
   _visionDistance: 5
+  _collider2D: {fileID: 0}
 --- !u!1 &8621969434331576762
 GameObject:
   m_ObjectHideFlags: 0
@@ -79,7 +80,7 @@ GameObject:
   - component: {fileID: 298987893616145960}
   m_Layer: 0
   m_Name: Agressor
-  m_TagString: Untagged
+  m_TagString: Aggressor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
