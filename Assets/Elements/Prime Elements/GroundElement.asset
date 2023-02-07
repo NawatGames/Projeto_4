@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 503555288663421eb9161f3d376d3079, type: 3}
-  m_Name: EarthElement
+  m_Name: GroundElement
   m_EditorClassIdentifier: 
   PlatformBehavioursArray: []
   platformIdleSprites:
