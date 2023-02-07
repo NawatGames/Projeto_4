@@ -569,6 +569,10 @@ PrefabInstance:
       propertyPath: AnimateEvent
       value: 
       objectReference: {fileID: 11400000, guid: 421bd16260e699d468937f9fa881d9db, type: 2}
+    - target: {fileID: 4876299441898460741, guid: 93784db76eb70b84081820cdf8962457, type: 3}
+      propertyPath: _cleanElementSelectionOnSpawn
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4876299441920557368, guid: 93784db76eb70b84081820cdf8962457, type: 3}
       propertyPath: AllSecondaryElements.Array.size
       value: 3
