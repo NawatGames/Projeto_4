@@ -25,7 +25,7 @@ namespace Main_Scripts.Enemies.Shooter {
                 var platformElement = col.gameObject.GetComponent<PlatformElementHandler>().PlatformElement;
                 if (platformElement == _bulletElement.elementToLoseFor) {
                     Destroy(gameObject);
-                    eventToTrigger.InvokeEvent();
+                    eventToTrigger?.InvokeEvent();
                 }
             }
         }
