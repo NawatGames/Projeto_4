@@ -7,17 +7,21 @@ using UnityEngine.UIElements;
 
 public class ImageAnimatorHandler : MonoBehaviour
 {
-    [SerializeField] private GameObject _gameObject;
+    [SerializeField] private Vector3 _scaleVector;
+    [SerializeField] private float duration;
+    [SerializeField] AnimationCurve _animationCurve;
     
+
+
     // Start is called before the first frame update
     void Awake()
     {
-        gameObject.
+        transform.DOScale(_scaleVector, duration).SetEase(_animationCurve);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
