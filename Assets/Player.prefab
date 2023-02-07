@@ -445,6 +445,7 @@ MonoBehaviour:
   diedEvent: {fileID: 11400000, guid: 013c690050e6c1346bc0246ef0fa5e79, type: 2}
   curedHealthEvent: {fileID: 11400000, guid: 8e920fb9325fa814194efa2511656936, type: 2}
   tookDamageWhileInvincibleEvent: {fileID: 11400000, guid: d7eb8673098d6994185ec607dc1b8e9a, type: 2}
+  healthChangedEvent: {fileID: 11400000, guid: 4075e82974af54f4a86411419392d8a7, type: 2}
 --- !u!114 &-792403998712125124
 MonoBehaviour:
   m_ObjectHideFlags: 0
