@@ -1,3 +1,4 @@
+using EventSystem.SimpleEvents;
 using Main_Scripts.EventSystem.SimpleEvents;
 using UnityEngine;
 
@@ -13,6 +14,8 @@ namespace HealthSystem {
         [SerializeField] private NoTypeGameEvent diedEvent;
         [SerializeField] private NoTypeGameEvent curedHealthEvent;
         [SerializeField] private NoTypeGameEvent tookDamageWhileInvincibleEvent;
+        [SerializeField] private IntegerEvent healthChangedEvent;
+
         
         private void Awake() {
             currentHealth = maxHealth;
@@ -21,6 +24,7 @@ namespace HealthSystem {
         public void SetCurrentHealth(int newHealthValue) {
             currentHealth = newHealthValue;
             currentHealth = Mathf.Clamp(currentHealth, minHealth, maxHealth);
+            healthChangedEvent?.InvokeEvent(currentHealth);
         }
 
         public void CureHealth(int cureAmount) {        
