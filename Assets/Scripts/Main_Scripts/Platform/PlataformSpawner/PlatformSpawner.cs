@@ -36,6 +36,9 @@ namespace Main_Scripts.PlataformSpawner {
             
             platformGameobj.GetComponent<PlatformElementHandler>().Inialize(elementSelectedSingleton.Value);
             platformGameobj.GetComponent<DecaySystem>().StartDecayCoroutine();
+            
+            var animator = platformGameobj.AddComponent(typeof(Animator)) as Animator;
+            animator.runtimeAnimatorController = elementSelectedSingleton.Value.animatorController;
 
             if (ClampAngle(vectorAngle) == 90f)
                 platformGameobj.GetComponent<PlatformEffector2D>().enabled = false;
