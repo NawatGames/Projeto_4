@@ -1,5 +1,6 @@
 using Main_Scripts.Platform.PlatformBehaviours;
 using UnityEngine;
+using UnityEditor.Animations;
 
 namespace Main_Scripts.ElementSystem {
     public class ElementSO : ScriptableObject {
@@ -7,5 +8,6 @@ namespace Main_Scripts.ElementSystem {
         public Sprite platformInitialSprite;
         public Sprite bulletSprite;
         public ElementSO elementToLoseFor;
+        public AnimatorController animatorController;
     }
 }

@@ -18,3 +18,4 @@ MonoBehaviour:
   platformInitialSprite: {fileID: 21300000, guid: 9c35ddb4cdf4fe74ba13b70b55085864, type: 3}
   bulletSprite: {fileID: 21300000, guid: 008620e8ffe6ad44781d2bfcb5f80d6d, type: 3}
   elementToLoseFor: {fileID: 11400000, guid: ebcc9686690f6e04f8ffae25d1f7ff26, type: 2}
+  animatorController: {fileID: 9100000, guid: 219b148d59b112b458b725ced1339a47, type: 2}
