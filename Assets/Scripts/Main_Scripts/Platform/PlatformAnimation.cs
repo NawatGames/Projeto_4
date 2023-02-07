@@ -1,28 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using EventSystem.SimpleEvents;
 
-public class PlatformAnimation : MonoBehaviour
+namespace Main_Scripts.Platform
 {
-    private Animator _animator;
-    
-    // Start is called before the first frame update
-    void Start()
+    public class PlatformAnimation : MonoBehaviour
     {
+        public AnimatePlatformEvent eventToListen;
+        private Animator _animator;
+        private AnimatorControllerParameter _elementMap;
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        private void Start() {
+            _animator = gameObject.GetComponent<Animator>();
+            _elementMap = _animator.parameters[0];
+        }
         
-    }
-}
+        private void OnEnable() {
+            eventToListen.SubscribeUnityEvent(AnimatePlatform);
+        }
 
-public static class ElementMap{
-    public static int firePlatform = 0;
-    public static int glassPlatform = 1;
-    public static int groundPlatform = 2;
-    public static int waterPlatform = 3;
-    public static int windPlatform = 4;
+        private void OnDisable() {
+            eventToListen.UnsubscribeUnityEvent(AnimatePlatform);
+        }
+
+        public void AnimatePlatform(int elementIndex){
+            _animator.SetInteger(_elementMap.name, elementIndex);
+        }
+    }
 }
