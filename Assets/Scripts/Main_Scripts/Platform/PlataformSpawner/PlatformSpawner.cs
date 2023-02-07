@@ -1,4 +1,5 @@
 using EventSystem;
+using Main_Scripts.ElementSystem;
 using EventSystem.SimpleEvents;
 using Main_Scripts.EventSystem.SimpleEvents;
 using Main_Scripts.Platform;
@@ -36,9 +37,8 @@ namespace Main_Scripts.PlataformSpawner {
             
             platformGameobj.GetComponent<PlatformElementHandler>().Inialize(elementSelectedSingleton.Value);
             platformGameobj.GetComponent<DecaySystem>().StartDecayCoroutine();
-            
-            var animator = platformGameobj.AddComponent(typeof(Animator)) as Animator;
-            animator.runtimeAnimatorController = elementSelectedSingleton.Value.animatorController;
+
+            AddAnimationComponent(platformGameobj, elementSelectedSingleton.Value);
 
             if (ClampAngle(vectorAngle) == 90f)
                 platformGameobj.GetComponent<PlatformEffector2D>().enabled = false;
@@ -64,6 +64,11 @@ namespace Main_Scripts.PlataformSpawner {
             if (angle >= 112.5 && angle <= 157.5) return 315f;
              
             return 0;
+        }
+
+        private void AddAnimationComponent(GameObject gameObjectToAttachAnimationTo, ElementSO element){
+            var animator = gameObjectToAttachAnimationTo.AddComponent(typeof(Animator)) as Animator;
+            animator.runtimeAnimatorController = element.animatorController;
         }
         
     }
