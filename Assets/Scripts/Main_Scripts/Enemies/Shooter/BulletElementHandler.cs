@@ -1,6 +1,7 @@
 using Main_Scripts.ElementSystem;
 using Main_Scripts.EventSystem.SimpleEvents;
 using Main_Scripts.Platform;
+using System.Collections;
 using UnityEngine;
 
 namespace Main_Scripts.Enemies.Shooter {
@@ -14,6 +15,7 @@ namespace Main_Scripts.Enemies.Shooter {
             _bulletElement = elementSo;
             GetComponent<SpriteRenderer>().sprite = _bulletElement.bulletSprite;
             eventToTrigger = eventBulletDestroyed;
+            StartCoroutine(StartProjectileDestroyTimer(5f));
         }
 
         public void ChangeElement(ElementSO elementSo) {
@@ -29,6 +31,11 @@ namespace Main_Scripts.Enemies.Shooter {
                 }
             }
         }
-
+        
+        private IEnumerator StartProjectileDestroyTimer(float delay){
+            yield return new WaitForSeconds(delay);
+            Destroy(gameObject);
+            eventToTrigger?.InvokeEvent();
+        }
     }
 }
