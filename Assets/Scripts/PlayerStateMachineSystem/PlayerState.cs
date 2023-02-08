@@ -5,8 +5,10 @@ namespace PlayerStateMachineSystem
 {
     public class PlayerState : MonoBehaviour
     {
+        public string stateName;
         public List<StateAction> actions;
         public List<StateTransition> transitions;
+        
         public void Execute(PlayerStateMachine playerStateMachine)
         {
             foreach (var action in actions)
