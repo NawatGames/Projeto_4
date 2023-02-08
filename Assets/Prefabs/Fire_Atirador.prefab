@@ -223,7 +223,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  delayInSeconds: 5
+  delayInSeconds: 2
   layerMasks:
     serializedVersion: 2
     m_Bits: 1
