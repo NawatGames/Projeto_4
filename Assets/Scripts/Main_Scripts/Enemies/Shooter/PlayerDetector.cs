@@ -10,12 +10,14 @@ namespace Enemies.Shooter {
         [SerializeField] private float delayInSeconds;
         [SerializeField] private LayerMask layerMasks;
         private CircleCollider2D _collider;
+        private Animator _shooterAnimator;
         private GameObject _playerInstance;
         private Coroutine _playerVisibilityCoroutine;
         
 
         private void Awake() {
             _collider = GetComponent<CircleCollider2D>();
+            _shooterAnimator = gameObject.GetComponent<Animator>();
             _playerInstance = GameObject.FindGameObjectWithTag("Player");
         }
 
@@ -44,6 +46,8 @@ namespace Enemies.Shooter {
                 var distanceY = _collider.radius * gameObject.transform.localScale.y;
                 var raycastHit2D = Physics2D.Raycast(enemyPosition , direction, Mathf.Max(distanceX, distanceY), layerMasks);
                 if (raycastHit2D && raycastHit2D.transform.gameObject == _playerInstance) {
+                    _shooterAnimator.SetTrigger("Attacked");
+                    yield return new WaitForSeconds(0.4f);
                     _playerDetectedEvent?.Invoke(direction);
                 }
                 yield return new WaitForSeconds(delayInSeconds);
