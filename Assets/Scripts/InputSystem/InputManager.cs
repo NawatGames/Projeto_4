@@ -12,9 +12,12 @@ namespace InputSystem
     {
 
         private InputMap inputMap;
+
         
         public Vector2Event walkDirectionChangedEvent;
         public BoolEvent  jumpChangedEvent;
+        public BoolEvent dashingChangedEvent;
+
 
         private void Awake()
         {
@@ -46,6 +49,11 @@ namespace InputSystem
         public void OnJump(InputAction.CallbackContext context)
         {
             jumpChangedEvent.InvokeEvent(context.ReadValueAsButton());
+        }
+
+        public void OnDash(InputAction.CallbackContext context)
+        {
+            dashingChangedEvent.InvokeEvent((context.ReadValueAsButton()));
         }
     }
 }

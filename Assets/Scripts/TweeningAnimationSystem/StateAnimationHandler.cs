@@ -12,7 +12,7 @@ public class StateAnimationHandler : MonoBehaviour
      private List<BackFootAnimationHandler> backFootAnimationHandlers;
      private List<FrontFootAnimationHandler> frontFootAnimationHandlers;
 
-     [SerializeField] private List<Animator> animators;
+     private List<Animator> animators;
 
     [SerializeField] private PlayerStateMachineEventHandler playerStateMachineEventHandler;
 
