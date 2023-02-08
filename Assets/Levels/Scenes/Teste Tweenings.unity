@@ -311,6 +311,18 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8960144994032454255, guid: faa24c0cd843c484aa24d280157f7155, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8960144994192603384, guid: faa24c0cd843c484aa24d280157f7155, type: 3}
+      propertyPath: offset.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8960144994192603384, guid: faa24c0cd843c484aa24d280157f7155, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8960144995021021267, guid: faa24c0cd843c484aa24d280157f7155, type: 3}
       propertyPath: m_RootOrder
       value: 4
