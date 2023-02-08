@@ -13,9 +13,11 @@ GameObject:
   - component: {fileID: 5907115533623019742}
   - component: {fileID: 5907115533623019739}
   - component: {fileID: 5907115533623019736}
+  - component: {fileID: -7011507047934497684}
+  - component: {fileID: -2234868985173752878}
   m_Layer: 7
   m_Name: Atirador
-  m_TagString: Untagged
+  m_TagString: Shooter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,3 +150,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabToShoot: {fileID: 8019405048914347988, guid: 31ba38a04ddcc5842bc61b66bc107f27, type: 3}
   bulletElementToShot: {fileID: 11400000, guid: 9d558f646751c6d4a8f2fe1db51f1b85, type: 2}
+  bulletDestroyedEvent: {fileID: 0}
+--- !u!114 &-7011507047934497684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5907115533623019681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01d5fb7bb70a48449ddba0e59891ea94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  minHealth: 0
+  currentHealth: 0
+  canTakeDamage: 1
+  tookDamageEvent: {fileID: 0}
+  diedEvent: {fileID: 0}
+  curedHealthEvent: {fileID: 0}
+  tookDamageWhileInvincibleEvent: {fileID: 0}
+  healthChangedEvent: {fileID: 0}
+--- !u!114 &-2234868985173752878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5907115533623019681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 965ff332f43fd3346a113565523de79b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsThatSufferFrom:
+  - objectThatDealsDamage: {fileID: 8019405048914347988, guid: 31ba38a04ddcc5842bc61b66bc107f27, type: 3}
+    damageReceivedByObject: 100

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 namespace Main_Scripts.EventSystem.SimpleEvents {
-    [CreateAssetMenu(fileName = "Game_Event", menuName = "simple event/Event")]
+    [CreateAssetMenu(fileName = "Game_Event", menuName = "simple event/NoTypeGameEvent")]
     public class NoTypeGameEvent : ScriptableObject, IGameEvent {
         private HashSet<UnityEvent> _unityEventsSet;
         

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4468691726264630391}
   - component: {fileID: 6643738334485849105}
   - component: {fileID: 6964635949282641772}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Movement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65,6 +65,7 @@ MonoBehaviour:
   _speedPatrolMode: 1
   _speedChaseMode: 1.5
   _visionDistance: 5
+  _collider2D: {fileID: 0}
 --- !u!1 &8621969434331576762
 GameObject:
   m_ObjectHideFlags: 0
@@ -77,9 +78,11 @@ GameObject:
   - component: {fileID: 3781744232045412356}
   - component: {fileID: 6359827145104437910}
   - component: {fileID: 298987893616145960}
-  m_Layer: 0
+  - component: {fileID: -6476815330768965125}
+  - component: {fileID: -5082598587288523614}
+  m_Layer: 7
   m_Name: Agressor
-  m_TagString: Untagged
+  m_TagString: Aggressor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,3 +202,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-6476815330768965125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8621969434331576762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01d5fb7bb70a48449ddba0e59891ea94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  minHealth: 0
+  currentHealth: 0
+  canTakeDamage: 1
+  tookDamageEvent: {fileID: 0}
+  diedEvent: {fileID: 0}
+  curedHealthEvent: {fileID: 0}
+  tookDamageWhileInvincibleEvent: {fileID: 0}
+  healthChangedEvent: {fileID: 0}
+--- !u!114 &-5082598587288523614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8621969434331576762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 965ff332f43fd3346a113565523de79b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsThatSufferFrom:
+  - objectThatDealsDamage: {fileID: 1374462836795830143, guid: 30cd63fd71cff5446a9accccac1b17f0, type: 3}
+    damageReceivedByObject: 50
+  - objectThatDealsDamage: {fileID: 8019405048914347988, guid: 31ba38a04ddcc5842bc61b66bc107f27, type: 3}
+    damageReceivedByObject: 50

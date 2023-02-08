@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Platform
   - Projectil
+  - Shooter
+  - Aggressor
   layers:
   - Default
   - TransparentFX

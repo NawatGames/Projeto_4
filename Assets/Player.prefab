@@ -309,6 +309,8 @@ GameObject:
   - component: {fileID: 4876299442523475116}
   - component: {fileID: 4876299442523475117}
   - component: {fileID: 4876299442523475112}
+  - component: {fileID: -792403998712125124}
+  - component: {fileID: 5271985249239988373}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -436,12 +438,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01d5fb7bb70a48449ddba0e59891ea94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
+  minHealth: 0
   currentHealth: 0
-  maxHealth: 0
   canTakeDamage: 1
-  damageAppliedEvent: {fileID: 0}
-  diedEvent: {fileID: 0}
-  healthCuredEvent: {fileID: 0}
+  tookDamageEvent: {fileID: 11400000, guid: e1de9af6951c4054c87bc860e3f0b5cd, type: 2}
+  diedEvent: {fileID: 11400000, guid: 013c690050e6c1346bc0246ef0fa5e79, type: 2}
+  curedHealthEvent: {fileID: 11400000, guid: 8e920fb9325fa814194efa2511656936, type: 2}
+  tookDamageWhileInvincibleEvent: {fileID: 11400000, guid: d7eb8673098d6994185ec607dc1b8e9a, type: 2}
+  healthChangedEvent: {fileID: 11400000, guid: 4075e82974af54f4a86411419392d8a7, type: 2}
+--- !u!114 &-792403998712125124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4876299442523475107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cb9d222f2be48e69e3a9bdeac597cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invulnerabilityTimeInSeconds: 1
+  playerTookDamageEvent: {fileID: 11400000, guid: e1de9af6951c4054c87bc860e3f0b5cd, type: 2}
+  becameInvincibleEvent: {fileID: 11400000, guid: 0106315c55d67b94fbe67bd294dc5575, type: 2}
+  becameMortalEvent: {fileID: 11400000, guid: 15740b2c4ff4d5d4d8cab633330ae752, type: 2}
+--- !u!114 &5271985249239988373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4876299442523475107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 965ff332f43fd3346a113565523de79b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsThatSufferFrom:
+  - objectThatDealsDamage: {fileID: 8621969434331576762, guid: e6afcf7c6aaf4064d987de4a6bf9a46d, type: 3}
+    damageReceivedByObject: 20
+  - objectThatDealsDamage: {fileID: 8019405048914347988, guid: 31ba38a04ddcc5842bc61b66bc107f27, type: 3}
+    damageReceivedByObject: 20
 --- !u!1 &4876299442801482771
 GameObject:
   m_ObjectHideFlags: 0

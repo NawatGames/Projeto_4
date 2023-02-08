@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2da0e01ae544bf2a5e43cb23270d74f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decayDurationInSeconds: 4
+  decayDurationInSeconds: 8
   eventToTriggerOnDecay: {fileID: 11400000, guid: 2df07f7ed708ad04fb702322e49e7c92, type: 2}
   destroyAfterDecay: 1
 --- !u!114 &1473779492629456343
