@@ -1,5 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &664565645
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 664565646}
+  - component: {fileID: 664565647}
+  m_Layer: 0
+  m_Name: IsDashingCondition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &664565646
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664565645}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.9800498, y: -2.8418224, z: 4.2831974}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8797786433504520302}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &664565647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664565645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d6befb10abbda442b1cc1c70bb616ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8797786433504520303
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,6 +75,7 @@ Transform:
   - {fileID: 8797786434669396233}
   - {fileID: 8797786434127831872}
   - {fileID: 8797786434540465515}
+  - {fileID: 664565646}
   m_Father: {fileID: 8797786433737406755}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -45,6 +90,7 @@ GameObject:
   - component: {fileID: 8797786433737406755}
   - component: {fileID: 8797786433737406781}
   - component: {fileID: 8797786433737406754}
+  - component: {fileID: 1417146281}
   m_Layer: 0
   m_Name: StateMachine
   m_TagString: Untagged
@@ -99,6 +145,21 @@ MonoBehaviour:
   StateChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1417146281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8797786433737406752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abcfe205f2dfed74a81cb70c5f3cee60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStateMachineEventHandler: {fileID: 8797786433737406754}
+  playerRoot: {fileID: 0}
+  spriteRoot: {fileID: 0}
 --- !u!1 &8797786433979232201
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,6 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398d69e562044655b397e01d4bb46f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateName: Idle
   actions: []
   transitions:
   - condition: {fileID: 8797786434127831875}
@@ -198,6 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398d69e562044655b397e01d4bb46f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateName: Falling
   actions: []
   transitions:
   - condition: {fileID: 8797786434669396232}
@@ -293,6 +356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398d69e562044655b397e01d4bb46f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateName: Running
   actions: []
   transitions:
   - condition: {fileID: 8797786434127831875}
@@ -441,6 +505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398d69e562044655b397e01d4bb46f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateName: Jumping
   actions: []
   transitions:
   - condition: {fileID: 8797786434540465514}
@@ -526,5 +591,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398d69e562044655b397e01d4bb46f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateName: Dashing
   actions: []
   transitions: []
