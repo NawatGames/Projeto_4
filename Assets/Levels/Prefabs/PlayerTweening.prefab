@@ -1,165 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &184426103
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 184426104}
-  - component: {fileID: 184426106}
-  - component: {fileID: 184426105}
-  - component: {fileID: 184426107}
-  - component: {fileID: 184426108}
-  m_Layer: 0
-  m_Name: Dash
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &184426104
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 184426103}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8960144995150276024}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &184426106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 184426103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd892852f54d4bcbb65f2b6ccde2d614, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rootTransform: {fileID: 8960144995021021267}
-  dashForce: 17
-  _rigidbody2D: {fileID: 8960144995021021264}
-  DashStartEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8960144995021021264}
-        m_TargetAssemblyTypeName: UnityEngine.Rigidbody2D, UnityEngine
-        m_MethodName: set_gravityScale
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 8960144995150276026}
-        m_TargetAssemblyTypeName: Movement_System.CharacterMovementHandler, Assembly-CSharp
-        m_MethodName: set_canMove
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &184426105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 184426103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9fb1b42ea2c13447bd4296a362a559c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dashingController: {fileID: 184426106}
-  dashingChangedEvent: {fileID: 11400000, guid: 95e7f369b3da30249a89161cd117fafb, type: 2}
-  movementDirectionEvent: {fileID: 11400000, guid: 5c570183a46c3fd4790a4d5463eb4f1b, type: 2}
-  dashVerifier: {fileID: 184426108}
---- !u!114 &184426107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 184426103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 649da0dc67c3431db518710324e3f4fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dashingController: {fileID: 184426106}
-  dashDuration: 0.2
-  DashFinishedEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 184426106}
-        m_TargetAssemblyTypeName: DashingController, Assembly-CSharp
-        m_MethodName: EndDash
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 8960144995021021264}
-        m_TargetAssemblyTypeName: UnityEngine.Rigidbody2D, UnityEngine
-        m_MethodName: set_gravityScale
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 3
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 8960144995150276026}
-        m_TargetAssemblyTypeName: Movement_System.CharacterMovementHandler, Assembly-CSharp
-        m_MethodName: set_canMove
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
---- !u!114 &184426108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 184426103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 544b2b8d62b806d4f96ff301c654ca65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dashingController: {fileID: 184426106}
-  dashingFinisherController: {fileID: 184426107}
 --- !u!1 &8960144993625806705
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8960144993625806706}
-  - component: {fileID: 2007418309}
   m_Layer: 0
   m_Name: Sprites
   m_TagString: Untagged
@@ -200,20 +39,6 @@ Transform:
   m_Father: {fileID: 8960144995021021267}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2007418309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8960144993625806705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7049ca52d1acec4b9fb985030f203b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementDirectionEvent: {fileID: 11400000, guid: 5c570183a46c3fd4790a4d5463eb4f1b, type: 2}
-  spriteRoot: {fileID: 8960144993625806705}
 --- !u!1 &8960144993683045270
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,7 +158,6 @@ GameObject:
   - component: {fileID: 8960144993701355343}
   - component: {fileID: 8960144993701355328}
   - component: {fileID: 8960144993701355329}
-  - component: {fileID: 2106316480}
   m_Layer: 0
   m_Name: Front_Hand
   m_TagString: Untagged
@@ -396,7 +220,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 106
+  m_SortingOrder: 101
   m_Sprite: {fileID: 21300000, guid: d8803db8e2904134b90fe68d433a31ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -544,7 +368,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8960144993701355339}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f2614f0e0e85cb43a4a7d5547114ce6, type: 3}
   m_Name: 
@@ -580,49 +404,6 @@ MonoBehaviour:
   offset: {x: -0.69, y: 0.49}
   xAxisElipse: 0.45
   yAxisElipse: 0.39
---- !u!114 &2106316480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8960144993701355339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f2614f0e0e85cb43a4a7d5547114ce6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AnimationState: Dashing
-  duration: 0.64
-  animationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  ti: 0.27
-  tf: 0.42
-  offset: {x: -1.17, y: -0.79}
-  xAxisElipse: 0.45
-  yAxisElipse: 0.39
 --- !u!1 &8960144994032454250
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,7 +418,6 @@ GameObject:
   - component: {fileID: 8960144994032454255}
   - component: {fileID: 8960144994032454240}
   - component: {fileID: 8960144994032454241}
-  - component: {fileID: 2102104200}
   m_Layer: 0
   m_Name: Back_Foot
   m_TagString: Untagged
@@ -762,7 +542,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8960144994032454250}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e02eacfad4de287459ad4d91016ea28a, type: 3}
   m_Name: 
@@ -885,49 +665,6 @@ MonoBehaviour:
   offset: {x: -0.1, y: -1.87}
   xAxisElipse: 0.31
   yAxisElipse: 0.8
---- !u!114 &2102104200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8960144994032454250}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f2614f0e0e85cb43a4a7d5547114ce6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AnimationState: Dashing
-  duration: 0.34
-  animationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  ti: 0.23
-  tf: 0.21
-  offset: {x: -0.65, y: -2.13}
-  xAxisElipse: 0.31
-  yAxisElipse: 0.8
 --- !u!1 &8960144994192603363
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,7 +679,6 @@ GameObject:
   - component: {fileID: 8960144994192603384}
   - component: {fileID: 8960144994192603385}
   - component: {fileID: 8960144994192603386}
-  - component: {fileID: 987678797}
   m_Layer: 0
   m_Name: Front_Foot
   m_TagString: Untagged
@@ -1067,7 +803,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8960144994192603363}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9a52972c0bff6e4c9ee169c9678d1ba, type: 3}
   m_Name: 
@@ -1101,7 +837,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   ti: 3.14
   tf: 0
-  offset: {x: 0.25, y: -1.66}
+  offset: {x: 1, y: -1.66}
   xAxisElipse: 0.51
   yAxisElipse: 0.25
   phase: 0
@@ -1191,49 +927,6 @@ MonoBehaviour:
   offset: {x: 0.17, y: -1.87}
   xAxisElipse: 0.31
   yAxisElipse: 0.8
---- !u!114 &987678797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8960144994192603363}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f2614f0e0e85cb43a4a7d5547114ce6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AnimationState: Dashing
-  duration: 0.34
-  animationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  ti: 0.23
-  tf: 0.21
-  offset: {x: 0.17, y: -1.58}
-  xAxisElipse: 0.31
-  yAxisElipse: 0.8
 --- !u!1 &8960144994760061167
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,7 +951,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8960144994760061167}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.136, y: -1.728, z: 0}
+  m_LocalPosition: {x: 0.136, y: -1.714, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1384,7 +1077,6 @@ GameObject:
   - component: {fileID: 8960144994922608172}
   - component: {fileID: 8960144994922608173}
   - component: {fileID: 8960144994922608174}
-  - component: {fileID: 437050259}
   m_Layer: 0
   m_Name: Back_Hand
   m_TagString: Untagged
@@ -1552,7 +1244,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8960144994922608168}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f2614f0e0e85cb43a4a7d5547114ce6, type: 3}
   m_Name: 
@@ -1595,7 +1287,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8960144994922608168}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f2614f0e0e85cb43a4a7d5547114ce6, type: 3}
   m_Name: 
@@ -1629,49 +1321,6 @@ MonoBehaviour:
   ti: 0.27
   tf: 0.42
   offset: {x: -0.69, y: 0.49}
-  xAxisElipse: 0.45
-  yAxisElipse: 0.39
---- !u!114 &437050259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8960144994922608168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f2614f0e0e85cb43a4a7d5547114ce6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AnimationState: Dashing
-  duration: 0.64
-  animationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  ti: 0.27
-  tf: 0.42
-  offset: {x: -1.17, y: -0.79}
   xAxisElipse: 0.45
   yAxisElipse: 0.39
 --- !u!1 &8960144995021021279
@@ -1777,9 +1426,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0.8
+  m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1938,8 +1587,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 184426104}
+  m_Children: []
   m_Father: {fileID: 8960144995021021267}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1974,7 +1622,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterMovementHandler: {fileID: 8960144995150276026}
   movementVerifier: {fileID: 8960144995150276029}
-  jumpSpeed: 6.57
+  jumpSpeed: 7.5
   inputDirection: {x: 0, y: 0}
   walkSpeed: 8.47
   movementDirectionEvent: {fileID: 11400000, guid: 5c570183a46c3fd4790a4d5463eb4f1b, type: 2}
@@ -2145,14 +1793,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8960144995021021267}
     m_Modifications:
-    - target: {fileID: 1417146281, guid: 28c21ddfd32999b488e908f16905f09e, type: 3}
-      propertyPath: playerRoot
-      value: 
-      objectReference: {fileID: 8960144995021021279}
-    - target: {fileID: 1417146281, guid: 28c21ddfd32999b488e908f16905f09e, type: 3}
-      propertyPath: spriteRoot
-      value: 
-      objectReference: {fileID: 8960144993625806705}
     - target: {fileID: 8797786433737406752, guid: 28c21ddfd32999b488e908f16905f09e, type: 3}
       propertyPath: m_Name
       value: StateMachine
