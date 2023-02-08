@@ -15,7 +15,6 @@ namespace Main_Scripts.Enemies.Shooter {
         public void ShotPrefab(Vector2 direction) {
             var angle = NormalizeAngle(direction);
             var shotPosition = transform.position + shotPositionOffset * Mathf.Max(transform.localScale.x, transform.localScale.y);
-            Debug.Log(gameObject.name + ": (" + shotPosition.x + ", " + shotPosition.y + ")");
             if (direction.y >= 0) _instantiatedBullet = Instantiate(_prefabToShoot, shotPosition, Quaternion.AngleAxis(angle, Vector3.forward));
             else _instantiatedBullet = Instantiate(_prefabToShoot, shotPosition, Quaternion.AngleAxis(angle + 180, Vector3.forward));
             _instantiatedBullet.AddComponent<BulletMoverMonoBehaviour>().Initialize(direction, 6f);
