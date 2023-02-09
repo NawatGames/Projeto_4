@@ -46,5 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkDirectionChangedEvent: {fileID: 11400000, guid: 5c570183a46c3fd4790a4d5463eb4f1b, type: 2}
   jumpChangedEvent: {fileID: 11400000, guid: 6f201f6fb75d2734796dd122051e5f43, type: 2}
+  dashingChangedEvent: {fileID: 11400000, guid: 95e7f369b3da30249a89161cd117fafb, type: 2}
   elementSelectedEvent: {fileID: 11400000, guid: bbf7399643714b14fab0c5f19557b10f, type: 2}
   mouseInitialAndEndPointEvent: {fileID: 11400000, guid: 7de93eac72d01da4bbab1c90ad7a1f92, type: 2}
