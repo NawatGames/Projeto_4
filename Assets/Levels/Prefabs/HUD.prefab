@@ -438,6 +438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 547592735120102796}
   - component: {fileID: 547592735120102799}
+  - component: {fileID: 6765927924381224004}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -518,6 +519,21 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6765927924381224004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547592735120102797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43a3365caa4bbc54b80e9c861c996883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthSystem: {fileID: 2950931959792514716}
+  healthChangedEvent: {fileID: 11400000, guid: 4075e82974af54f4a86411419392d8a7, type: 2}
+  _healthSlider: {fileID: 547592735120102799}
 --- !u!1 &4387965235024511503
 GameObject:
   m_ObjectHideFlags: 0
@@ -1600,6 +1616,7 @@ RectTransform:
   - {fileID: 4387965235319098564}
   - {fileID: 547592735120102796}
   - {fileID: 547592733999081483}
+  - {fileID: 1642885392985707554}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1646,3 +1663,56 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &8442360878153103458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1642885392985707554}
+  - component: {fileID: 2950931959792514716}
+  m_Layer: 0
+  m_Name: HealthSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1642885392985707554
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8442360878153103458}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.6661987, y: 223.54944, z: 4.6846433}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 547592733225327877}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2950931959792514716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8442360878153103458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01d5fb7bb70a48449ddba0e59891ea94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  minHealth: 0
+  currentHealth: 0
+  canTakeDamage: 1
+  tookDamageEvent: {fileID: 0}
+  diedEvent: {fileID: 0}
+  curedHealthEvent: {fileID: 0}
+  tookDamageWhileInvincibleEvent: {fileID: 0}
+  healthChangedEvent: {fileID: 0}
