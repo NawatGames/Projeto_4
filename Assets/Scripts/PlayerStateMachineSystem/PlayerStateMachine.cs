@@ -25,6 +25,7 @@ namespace PlayerStateMachineSystem
             var previewsState = currentPlayerState;
             currentPlayerState = playerState;
             playerStateMachineEventHandler.InvokeEvents(currentPlayerState,previewsState);
+            playerState.EnterStateEvent.Invoke();
         }
     }
 }

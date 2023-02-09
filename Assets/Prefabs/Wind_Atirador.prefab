@@ -216,7 +216,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: f3a159f05bb39394abbaa67e17906002, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -311,6 +311,9 @@ MonoBehaviour:
   curedHealthEvent: {fileID: 0}
   tookDamageWhileInvincibleEvent: {fileID: 0}
   healthChangedEvent: {fileID: 0}
+  DiedUnityEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &7837139044613339539
 MonoBehaviour:
   m_ObjectHideFlags: 0
