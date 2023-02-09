@@ -1,6 +1,7 @@
 using EventSystem.SimpleEvents;
 using Main_Scripts.EventSystem.SimpleEvents;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace HealthSystem {
     public class HealthSystem : MonoBehaviour, IHealthSystem {
@@ -16,7 +17,8 @@ namespace HealthSystem {
         [SerializeField] private NoTypeGameEvent tookDamageWhileInvincibleEvent;
         [SerializeField] private IntegerEvent healthChangedEvent;
 
-        
+        public UnityEvent DiedUnityEvent;
+
         private void Awake() {
             currentHealth = maxHealth;
         }
