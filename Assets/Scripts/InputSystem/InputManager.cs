@@ -53,7 +53,6 @@ namespace InputSystem
 
         public void OnDash(InputAction.CallbackContext context)
         {
-            dashingChangedEvent.InvokeEvent((context.ReadValueAsButton()));
         }
     }
 }
