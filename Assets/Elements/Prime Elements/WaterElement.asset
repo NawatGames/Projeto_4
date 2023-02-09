@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 503555288663421eb9161f3d376d3079, type: 3}
+  m_Name: WaterElement
+  m_EditorClassIdentifier: 
+  PlatformBehavioursArray:
+  - {fileID: 11400000, guid: 3afefc0d6c22f80449656896267956ea, type: 2}
+  - {fileID: 11400000, guid: 9392f54ade935d7419e563660c012659, type: 2}
+  platformInitialSprite: {fileID: 21300000, guid: 08e9024df4a189b4ba9c4b0f8d07ff84, type: 3}
+  bulletSprite: {fileID: 21300000, guid: 03604ef57a8df0f4d9d184e8fca5eb71, type: 3}
+  elementToLoseFor: {fileID: 11400000, guid: 941a82e5f47f6c94089fe8638a25a346, type: 2}
+  animatorController: {fileID: 9100000, guid: 78dd4e285f0b29e409dc8d5a08f2ba3f, type: 2}
+  elementSpawnIndex: 0
