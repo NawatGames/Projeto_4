@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,6 +11,11 @@ namespace Movement_System
         public bool canMove { get; set; }
 
         public UnityEvent characterJumpedEvent;
+
+        private void Awake()
+        {
+            canMove = true;
+        }
 
         public void Move(Vector2 direction, float speed)
         {

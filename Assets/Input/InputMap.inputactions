@@ -26,7 +26,7 @@
                 {
                     "name": "Dash",
                     "type": "Button",
-                    "id": "f679d7e5-c528-4e8b-99ab-73bd35996300",
+                    "id": "0a7a2812-a969-49b9-aaf0-b95428a2d7a3",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -102,7 +102,7 @@
                 },
                 {
                     "name": "",
-                    "id": "728e9860-cf66-4918-b1cb-5c39b9f88076",
+                    "id": "a36a7393-9b0d-470b-9aee-f00d707af802",
                     "path": "<Keyboard>/leftShift",
                     "interactions": "",
                     "processors": "",
