@@ -541,11 +541,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1004797112541265112, guid: a1fe345d73eb8aa4d87cb1844003a27b, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1045412984148417847, guid: a1fe345d73eb8aa4d87cb1844003a27b, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1329188333110424102, guid: a1fe345d73eb8aa4d87cb1844003a27b, type: 3}
       propertyPath: transitions.Array.size
@@ -659,6 +659,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Final_Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6458227456531612825, guid: a1fe345d73eb8aa4d87cb1844003a27b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6458227457448025125, guid: a1fe345d73eb8aa4d87cb1844003a27b, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -685,15 +689,15 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6458227457862761357, guid: a1fe345d73eb8aa4d87cb1844003a27b, type: 3}
   m_PrefabInstance: {fileID: 1288485033}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1288485038 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6458227456531612821, guid: a1fe345d73eb8aa4d87cb1844003a27b, type: 3}
+  m_PrefabInstance: {fileID: 1288485033}
+  m_PrefabAsset: {fileID: 0}
 --- !u!61 &1295277118 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 6359827145104437910, guid: 717208b51e3095c49a04e20680f140be, type: 3}
   m_PrefabInstance: {fileID: 224129089}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1433645903 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6458227456531612821, guid: a1fe345d73eb8aa4d87cb1844003a27b, type: 3}
-  m_PrefabInstance: {fileID: 1288485033}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1451128792 stripped
 GameObject:
@@ -870,8 +874,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1433645903}
-  m_RootOrder: 5
+  m_Father: {fileID: 1288485038}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!213 &1754281015
 Sprite:
