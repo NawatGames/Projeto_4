@@ -40,6 +40,7 @@ namespace HealthSystem {
                 SetCurrentHealth(currentHealth - damageToApply);
                 if (currentHealth <= 0) {
                     diedEvent?.InvokeEvent();
+                    DiedUnityEvent.Invoke();
                     return;
                 }
                 tookDamageEvent?.InvokeEvent();
