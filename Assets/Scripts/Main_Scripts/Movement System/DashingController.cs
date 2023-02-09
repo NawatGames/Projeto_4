@@ -10,11 +10,18 @@ public class DashingController : MonoBehaviour
     public UnityEvent DashStartEvent;
     private Vector2 movementDirectionVar;
     private bool isDashingActive;
+    
+    
+    
     public void DoDash(Vector2 movementDirection)
     {
-        movementDirectionVar = movementDirection;
-        DashStartEvent.Invoke();
-        isDashingActive = true;
+
+        if (isDashingActive == false )
+        {
+            movementDirectionVar = movementDirection;
+            DashStartEvent.Invoke();
+            isDashingActive = true;
+        }
     }
 
     public void EndDash()

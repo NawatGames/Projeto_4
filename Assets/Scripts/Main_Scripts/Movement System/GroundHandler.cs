@@ -11,6 +11,7 @@ public class GroundHandler : MonoBehaviour
     [SerializeField] bool isGrounded;
     [SerializeField] float checkRadius = 1;
 
+    public bool IsGrounded => isGrounded;
 
     public UnityEvent <bool> touchGroundEvent;
 
