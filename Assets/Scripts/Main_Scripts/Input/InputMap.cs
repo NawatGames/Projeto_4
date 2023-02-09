@@ -44,6 +44,15 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Dash"",
+                    ""type"": ""Button"",
+                    ""id"": ""45f153c7-83c7-42c2-a82c-499ac92316fa"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -110,6 +119,17 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c85cdb0e-96bf-4084-89e9-a55f42250b73"",
+                    ""path"": ""<Keyboard>/leftShift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -258,6 +278,7 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
         m_Movement = asset.FindActionMap("Movement", throwIfNotFound: true);
         m_Movement_Walk = m_Movement.FindAction("Walk", throwIfNotFound: true);
         m_Movement_Jump = m_Movement.FindAction("Jump", throwIfNotFound: true);
+        m_Movement_Dash = m_Movement.FindAction("Dash", throwIfNotFound: true);
         // ElementSelection
         m_ElementSelection = asset.FindActionMap("ElementSelection", throwIfNotFound: true);
         m_ElementSelection_Element1 = m_ElementSelection.FindAction("Element1", throwIfNotFound: true);
@@ -329,12 +350,14 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
     private IMovementActions m_MovementActionsCallbackInterface;
     private readonly InputAction m_Movement_Walk;
     private readonly InputAction m_Movement_Jump;
+    private readonly InputAction m_Movement_Dash;
     public struct MovementActions
     {
         private @InputMap m_Wrapper;
         public MovementActions(@InputMap wrapper) { m_Wrapper = wrapper; }
         public InputAction @Walk => m_Wrapper.m_Movement_Walk;
         public InputAction @Jump => m_Wrapper.m_Movement_Jump;
+        public InputAction @Dash => m_Wrapper.m_Movement_Dash;
         public InputActionMap Get() { return m_Wrapper.m_Movement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -350,6 +373,9 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                 @Jump.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnJump;
+                @Dash.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnDash;
+                @Dash.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnDash;
+                @Dash.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnDash;
             }
             m_Wrapper.m_MovementActionsCallbackInterface = instance;
             if (instance != null)
@@ -360,6 +386,9 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
+                @Dash.started += instance.OnDash;
+                @Dash.performed += instance.OnDash;
+                @Dash.canceled += instance.OnDash;
             }
         }
     }
@@ -466,6 +495,7 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
     {
         void OnWalk(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnDash(InputAction.CallbackContext context);
     }
     public interface IElementSelectionActions
     {

@@ -10,6 +10,7 @@ namespace InputSystem {
         
         public Vector2Event walkDirectionChangedEvent;
         public BoolEvent  jumpChangedEvent;
+        public BoolEvent dashingChangedEvent;
         public IntegerEvent elementSelectedEvent;
         public Vector2TupleEvent mouseInitialAndEndPointEvent;
 
@@ -42,6 +43,11 @@ namespace InputSystem {
 
         public void OnJump(InputAction.CallbackContext context) {
             jumpChangedEvent.InvokeEvent(context.ReadValueAsButton());
+        }
+
+        public void OnDash(InputAction.CallbackContext context)
+        {
+            dashingChangedEvent.InvokeEvent((context.ReadValueAsButton()));
         }
 
 
@@ -81,6 +87,7 @@ namespace InputSystem {
                 mouseInitialAndEndPointEvent.InvokeEvent((_mouseInitialPoint, endPoint));
             }
         }
+        
 
         private static Vector2 GetMouseWorldPosition() {
             var mousePoint = Mouse.current.position.ReadValue();
