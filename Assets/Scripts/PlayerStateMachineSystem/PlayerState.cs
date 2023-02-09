@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace PlayerStateMachineSystem
 {
@@ -8,7 +9,9 @@ namespace PlayerStateMachineSystem
         public string stateName;
         public List<StateAction> actions;
         public List<StateTransition> transitions;
-        
+
+        public UnityEvent EnterStateEvent;
+
         public void Execute(PlayerStateMachine playerStateMachine)
         {
             foreach (var action in actions)
