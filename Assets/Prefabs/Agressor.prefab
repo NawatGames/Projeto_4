@@ -65,7 +65,7 @@ MonoBehaviour:
   _speedPatrolMode: 1
   _speedChaseMode: 1.5
   _visionDistance: 5
-  _collider2D: {fileID: 0}
+  _collider2D: {fileID: 6359827145104437910}
 --- !u!1 &8621969434331576762
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +149,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.76, y: 0.49}
+  m_Size: {x: 0.7530536, y: 0.49}
   m_EdgeRadius: 0
 --- !u!212 &298987893616145960
 SpriteRenderer:
