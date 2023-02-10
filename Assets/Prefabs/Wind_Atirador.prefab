@@ -290,6 +290,12 @@ MonoBehaviour:
   _prefabToShoot: {fileID: 8019405048914347988, guid: f162b21b721e9574688c15f72e6f6585, type: 3}
   bulletElementToShot: {fileID: 11400000, guid: 941a82e5f47f6c94089fe8638a25a346, type: 2}
   bulletDestroyedEvent: {fileID: 0}
+  elementSelectedSingleton: {fileID: 11400000, guid: 78cea2717f34b394db5ac33ddfa6dc15, type: 2}
+  fire_element: {fileID: 11400000, guid: 9d558f646751c6d4a8f2fe1db51f1b85, type: 2}
+  glass_element: {fileID: 11400000, guid: f4cd8fe16cddd354a850002bdfa8f307, type: 2}
+  ground_element: {fileID: 11400000, guid: 3004f2cfd70791640a4eec5b93e4595e, type: 2}
+  water_element: {fileID: 11400000, guid: ebcc9686690f6e04f8ffae25d1f7ff26, type: 2}
+  wind_element: {fileID: 11400000, guid: 941a82e5f47f6c94089fe8638a25a346, type: 2}
 --- !u!114 &1336765838389974573
 MonoBehaviour:
   m_ObjectHideFlags: 0
