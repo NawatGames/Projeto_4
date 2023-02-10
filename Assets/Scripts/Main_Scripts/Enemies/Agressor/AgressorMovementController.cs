@@ -35,8 +35,6 @@ namespace Enemies.Agressor {
         private void Update() {
             _movementHandler.Move(_currentDirection, _currentSpeed);
             UpdatePositions();
-            Debug.Log("EyePoint: (" + _eyePosition.x + ", " + _eyePosition.y + ")");
-            Debug.Log("FloPoint: (" + _floorScanPosition.x + ", " + _floorScanPosition.y + ")");
 
             if (!CheckDown() || CheckIfTheresSomethingBesidesThePlayerAhead()) {
                 _currentDirection *= -1;
@@ -76,16 +74,12 @@ namespace Enemies.Agressor {
         private bool CheckDown() {
             var rayCast = Physics2D.Raycast(_floorScanPosition, Vector2.down, 1f);
             var verify = rayCast.transform != null;
-            if (verify) Debug.Log("Down view: " + rayCast.transform.gameObject.name);
-            else Debug.Log("Down view: null");
             return verify;
         }
         
         private RaycastHit2D CheckAhead() {
             var rayCast = Physics2D.Raycast(_eyePosition, _currentDirection, _visionDistance);
             var verify = rayCast.transform != null;
-            if (verify) Debug.Log("Foward view: " + rayCast.transform.gameObject.name);
-            else Debug.Log("Foward view: null");
             return rayCast;
         }
 
