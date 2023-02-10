@@ -2,6 +2,7 @@ using EventSystem.SimpleEvents;
 using Main_Scripts.EventSystem.SimpleEvents;
 using UnityEngine;
 using UnityEngine.Events;
+using System.Collections;
 
 namespace HealthSystem {
     public class HealthSystem : MonoBehaviour, IHealthSystem {
@@ -41,11 +42,17 @@ namespace HealthSystem {
                 if (currentHealth <= 0) {
                     diedEvent?.InvokeEvent();
                     DiedUnityEvent.Invoke();
+                    StartCoroutine(destroyCountdown(3f));
                     return;
                 }
                 tookDamageEvent?.InvokeEvent();
             }
             else tookDamageWhileInvincibleEvent?.InvokeEvent();
+        }
+
+        private IEnumerator destroyCountdown(float delay){
+            yield return new WaitForSeconds(delay);
+            Destroy(gameObject);
         }
 
         // Interface stuff
