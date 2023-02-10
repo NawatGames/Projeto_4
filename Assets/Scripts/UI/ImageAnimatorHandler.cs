@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 using UnityEngine.UIElements;
 
+
 public class ImageAnimatorHandler : MonoBehaviour
 {
     [SerializeField] private Vector3 _scaleVector;
