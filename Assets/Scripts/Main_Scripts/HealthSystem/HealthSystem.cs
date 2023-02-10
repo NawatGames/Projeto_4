@@ -18,6 +18,8 @@ namespace HealthSystem {
         [SerializeField] private NoTypeGameEvent tookDamageWhileInvincibleEvent;
         [SerializeField] private IntegerEvent healthChangedEvent;
 
+        public GameObject toDestroy = null;
+
         public UnityEvent DiedUnityEvent;
 
         private void Awake() {
@@ -43,12 +45,18 @@ namespace HealthSystem {
                 if (currentHealth <= 0) {
                     diedEvent?.InvokeEvent();
                     DiedUnityEvent.Invoke();
-                    StartCoroutine(destroyCountdown(3f));
+                    if (toDestroy != null) StartCoroutine(destroyCountdown(3f, toDestroy));
+                    else StartCoroutine(destroyCountdown(3f));
                     return;
                 }
                 tookDamageEvent?.InvokeEvent();
             }
             else tookDamageWhileInvincibleEvent?.InvokeEvent();
+        }
+
+        private IEnumerator destroyCountdown(float delay, GameObject toDestroy){
+            yield return new WaitForSeconds(delay);
+            Destroy(toDestroy);
         }
 
         private IEnumerator destroyCountdown(float delay){

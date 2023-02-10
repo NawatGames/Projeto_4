@@ -5,11 +5,13 @@ using UnityEngine;
 public class Combat : MonoBehaviour
 {
     [SerializeField] private List<DangerousObject> objectsThatSufferFrom;
+    [SerializeField] private GameObject toDestroyWhenDie = null;
     private HealthSystem.HealthSystem health;
 
     private void Awake()
     {
         health = gameObject.GetComponent<HealthSystem.HealthSystem>();
+        health.toDestroy = toDestroyWhenDie;
     }
 
     private void OnCollisionEnter2D(Collision2D other)
