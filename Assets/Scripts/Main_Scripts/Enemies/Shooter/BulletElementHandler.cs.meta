@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 73572e133936410a8d8585aa85ce5e3e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _selfMover: {instanceID: 0}
+  - fire_element: {fileID: 11400000, guid: 9d558f646751c6d4a8f2fe1db51f1b85, type: 2}
+  - glass_element: {fileID: 11400000, guid: f4cd8fe16cddd354a850002bdfa8f307, type: 2}
+  - ground_element: {fileID: 11400000, guid: 3004f2cfd70791640a4eec5b93e4595e, type: 2}
+  - water_element: {fileID: 11400000, guid: ebcc9686690f6e04f8ffae25d1f7ff26, type: 2}
+  - wind_element: {fileID: 11400000, guid: 941a82e5f47f6c94089fe8638a25a346, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

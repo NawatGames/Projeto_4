@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 503555288663421eb9161f3d376d3079, type: 3}
+  m_Name: GlassElement
+  m_EditorClassIdentifier: 
+  PlatformBehavioursArray:
+  - {fileID: 11400000, guid: 9392f54ade935d7419e563660c012659, type: 2}
+  platformInitialSprite: {fileID: 21300000, guid: 99f5c7b9f3a908e42a5d9d655dffd208, type: 3}
+  bulletSprite: {fileID: 0}
+  elementToLoseFor: {fileID: 0}
+  animatorController: {fileID: 9100000, guid: 4fff548befb5bbd408e0b0bfb41cea05, type: 2}
+  elementSpawnIndex: 4
