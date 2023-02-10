@@ -9,7 +9,7 @@ namespace Movement_System
     public class CheckCharacterFall : MonoBehaviour
     {
 
-        [SerializeField] private new Rigidbody2D rigidbody2D;
+        [SerializeField] private Rigidbody2D rigidbody2D;
         private Vector2 _lastFrameVelocity;
         private Vector2 _currentFrameVelocity;
         [SerializeField] private GroundHandler groundHandler;

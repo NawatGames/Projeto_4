@@ -7,7 +7,7 @@ namespace Movement_System
     public class CharacterMovementHandler : MonoBehaviour
     {
         [SerializeField] private Transform root;
-        [SerializeField] private new Rigidbody2D rigidbody2D;
+        [SerializeField] private Rigidbody2D rigidbody2D;
         public bool canMove { get; set; }
 
         public UnityEvent characterJumpedEvent;
