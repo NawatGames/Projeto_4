@@ -65,7 +65,7 @@ MonoBehaviour:
   canWalk: 1
   _speedPatrolMode: 3
   _speedChaseMode: 7
-  _visionDistance: 5
+  _visionDistance: 9
   _agressorCollider2D: {fileID: 6359827145104437910}
   _agressorAnimator: {fileID: 35337045895700511}
 --- !u!1 &8621969434331576762
