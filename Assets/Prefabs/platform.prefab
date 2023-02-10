@@ -102,6 +102,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67805473f5f04d168ec46d36f45736df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  elementSelectedSingleton: {fileID: 11400000, guid: 78cea2717f34b394db5ac33ddfa6dc15, type: 2}
+  fire_element: {fileID: 11400000, guid: 9d558f646751c6d4a8f2fe1db51f1b85, type: 2}
+  glass_element: {fileID: 11400000, guid: f4cd8fe16cddd354a850002bdfa8f307, type: 2}
+  ground_element: {fileID: 11400000, guid: 3004f2cfd70791640a4eec5b93e4595e, type: 2}
+  water_element: {fileID: 11400000, guid: ebcc9686690f6e04f8ffae25d1f7ff26, type: 2}
+  wind_element: {fileID: 11400000, guid: 941a82e5f47f6c94089fe8638a25a346, type: 2}
+  fire_color: {r: 0.9647059, g: 0.5372549, b: 0, a: 1}
+  glass_color: {r: 1, g: 1, b: 1, a: 1}
+  ground_color: {r: 0.24313726, g: 0.5411765, b: 0.28235295, a: 1}
+  water_color: {r: 0.13725491, g: 0.7058824, b: 0.9647059, a: 1}
+  wind_color: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
 --- !u!61 &-7247246995770525671
 BoxCollider2D:
   m_ObjectHideFlags: 0
