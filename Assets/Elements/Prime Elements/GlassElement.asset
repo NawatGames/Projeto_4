@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 503555288663421eb9161f3d376d3079, type: 3}
   m_Name: GlassElement
   m_EditorClassIdentifier: 
-  PlatformBehavioursArray: []
+  PlatformBehavioursArray:
+  - {fileID: 11400000, guid: 9392f54ade935d7419e563660c012659, type: 2}
   platformInitialSprite: {fileID: 21300000, guid: 99f5c7b9f3a908e42a5d9d655dffd208, type: 3}
   bulletSprite: {fileID: 0}
   elementToLoseFor: {fileID: 0}
