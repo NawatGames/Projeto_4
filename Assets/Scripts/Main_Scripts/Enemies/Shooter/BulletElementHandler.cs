@@ -53,14 +53,20 @@ namespace Main_Scripts.Enemies.Shooter {
 
         private void OnTriggerEnter2D(Collider2D col) {
             if (col.CompareTag("Platform")) {
-                var platformElement = col.gameObject.GetComponent<PlatformElementHandler>().PlatformElement;
-                Debug.Log("Fire: " + fire_element);
-                if (platformElement == _bulletElement.elementToLoseFor) {
-                    Destroy(gameObject);
-                    eventToTrigger?.InvokeEvent();
-                }
+                var platHandler = col.gameObject.GetComponent<PlatformElementHandler>();
+                if (platHandler == null) return;
+                var platformElement = platHandler.PlatformElement;
+                if (platformElement == null) return;
+                var elementToLose = _bulletElement?.elementToLoseFor;
+                if (elementToLose != null)
+                    if (platformElement == _bulletElement.elementToLoseFor) {
+                        Destroy(gameObject);
+                        eventToTrigger?.InvokeEvent();
+                    }
                 if (platformElement == glass_element){
+                    var newElement = elementSelectedSingleton.Value;
                     _selfMover.Reflect(col.gameObject);
+                    if (newElement == glass_element) return;
                     ChangeElement(elementSelectedSingleton.Value);
                 }
             }

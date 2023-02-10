@@ -18,7 +18,7 @@ namespace Main_Scripts.Enemies.Shooter {
         [SerializeField] private ElementSO wind_element;
 
         private GameObject _instantiatedBullet;
-        private Vector3 shotPositionOffset = new Vector3(0.1109f, -0.0768f, 0); // got from children gameobject
+        private Vector3 shotPositionOffset = new Vector3(0.132f, -0.086f, 0); // got from children gameobject
         public void ShotPrefab(Vector2 direction) {
             var angle = NormalizeAngle(direction);
             var shotPosition = transform.position + shotPositionOffset * Mathf.Max(transform.localScale.x, transform.localScale.y);
