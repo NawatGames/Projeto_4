@@ -36,6 +36,7 @@ namespace HealthSystem {
         }
 
         public void ApplyDamage(int damageToApply) {
+            Debug.Log("Can take damage: " + canTakeDamage);
             if (canTakeDamage)
             {
                 SetCurrentHealth(currentHealth - damageToApply);

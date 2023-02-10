@@ -1259,6 +1259,26 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 547592735052293678, guid: cbb1073c13493574da40f4dab68c76e8, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387965235110062204, guid: cbb1073c13493574da40f4dab68c76e8, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387965235768203977, guid: cbb1073c13493574da40f4dab68c76e8, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387965236442008837, guid: cbb1073c13493574da40f4dab68c76e8, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387965236744994299, guid: cbb1073c13493574da40f4dab68c76e8, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7889722958670889005, guid: cbb1073c13493574da40f4dab68c76e8, type: 3}
       propertyPath: m_Name
       value: HUD
@@ -1914,6 +1934,50 @@ PrefabInstance:
       propertyPath: EnterStateEvent.m_PersistentCalls.m_Calls.Array.data[6].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1045412984148417844, guid: a1fe345d73eb8aa4d87cb1844003a27b, type: 3}
+      propertyPath: PrimeElementsArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9d558f646751c6d4a8f2fe1db51f1b85, type: 2}
+    - target: {fileID: 1045412984148417844, guid: a1fe345d73eb8aa4d87cb1844003a27b, type: 3}
+      propertyPath: PrimeElementsArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: ebcc9686690f6e04f8ffae25d1f7ff26, type: 2}
+    - target: {fileID: 1045412984148417844, guid: a1fe345d73eb8aa4d87cb1844003a27b, type: 3}
+      propertyPath: PrimeElementsArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 941a82e5f47f6c94089fe8638a25a346, type: 2}
+    - target: {fileID: 1045412984148417844, guid: a1fe345d73eb8aa4d87cb1844003a27b, type: 3}
+      propertyPath: PrimeElementsArray.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3004f2cfd70791640a4eec5b93e4595e, type: 2}
+    - target: {fileID: 2736200389995739836, guid: a1fe345d73eb8aa4d87cb1844003a27b, type: 3}
+      propertyPath: DashStartEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2736200389995739836, guid: a1fe345d73eb8aa4d87cb1844003a27b, type: 3}
+      propertyPath: DashStartEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2736200389995739836, guid: a1fe345d73eb8aa4d87cb1844003a27b, type: 3}
+      propertyPath: DashStartEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1288485040}
+    - target: {fileID: 2736200389995739836, guid: a1fe345d73eb8aa4d87cb1844003a27b, type: 3}
+      propertyPath: DashStartEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2736200389995739836, guid: a1fe345d73eb8aa4d87cb1844003a27b, type: 3}
+      propertyPath: DashStartEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: ActivateInvulnerability
+      objectReference: {fileID: 0}
+    - target: {fileID: 2736200389995739836, guid: a1fe345d73eb8aa4d87cb1844003a27b, type: 3}
+      propertyPath: DashStartEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: HealthSystem.InvulnerabilityFramesSystem, Main_Scripts
+      objectReference: {fileID: 0}
+    - target: {fileID: 2736200389995739836, guid: a1fe345d73eb8aa4d87cb1844003a27b, type: 3}
+      propertyPath: DashStartEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6458227456531612821, guid: a1fe345d73eb8aa4d87cb1844003a27b, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1969,6 +2033,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6458227456531612821, guid: a1fe345d73eb8aa4d87cb1844003a27b, type: 3}
   m_PrefabInstance: {fileID: 1288485033}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1288485040 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1125696476720403826, guid: a1fe345d73eb8aa4d87cb1844003a27b, type: 3}
+  m_PrefabInstance: {fileID: 1288485033}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cb9d222f2be48e69e3a9bdeac597cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1312290985 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2089700178, guid: a1fe345d73eb8aa4d87cb1844003a27b, type: 3}
