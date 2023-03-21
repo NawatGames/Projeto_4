@@ -4,7 +4,7 @@
 
 Este projeto consiste no desenvolvimento de um jogo bullet hell destinado primariamente à plataforma PC. O objetivo é desenvolver um jogo que, ao mesmo tempo que possa ser jogado casualmente, possa ser jogado competitivamente e ofereça uma mecânica divertida na qual os jogadores podem explorar uma grande variedade de formas de se defender e derrotar seus inimigos.
 
-![Capa do jogo](./Assets//Art/cover/capa-game.jpg)
+![Capa do jogo](./docs/images/capa-game.jpg)
 
 # Sobre o Jogo
 
@@ -12,8 +12,8 @@ O jogador se encontrará na base de uma torre que ele deve subir invocando suas 
 
 O mapa e os inimigos serão desenvolvidos de modo a permitir jogadas estratégicas para os jogadores ao defender e atacar seus inimigos, em algumas fases uma combinação errada de elementos poderá custar a vida dos jogadores proporcionando-lhes um desafio para balancear tanto maestria quanto táticas.
 
-![Gameplay 1](./Assets/Art/screenshots/gameplay1.png)
-![Gameplay 2](./Assets/Art/screenshots/gameplay2.png)
+![Gameplay 1](./docs/images/gameplay1.png)
+![Gameplay 2](./docs/images/gameplay2.png)
 
 ---
 
