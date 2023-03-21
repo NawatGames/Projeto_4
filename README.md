@@ -1,4 +1,6 @@
-# Projeto_3
+# Element Platform
+
+[Detalhamento completo do projeto através de seu Game Design Document](./docs/gdd/GDD%20PROJETO%203.docx)
 
 # Descrição Geral do Projeto
 
