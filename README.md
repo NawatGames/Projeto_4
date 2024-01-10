@@ -1,6 +1,7 @@
 # Element Platform
 
 [Detalhamento completo do projeto através de seu Game Design Document](./docs/gdd/GDD%20PROJETO%203.docx)
+[Itch.io](https://nawat-games.itch.io/element-plataform)
 
 # Descrição Geral do Projeto
 
