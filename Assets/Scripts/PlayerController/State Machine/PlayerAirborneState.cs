@@ -8,6 +8,7 @@ public class PlayerAirborneState : PlayerBaseState
     {
         Debug.Log("Airborne State");
         context = playerObj.GetComponentInChildren<PlayerStateController>();
+        movement.Jump();
     }
     public override void Do()
     {
@@ -18,7 +19,7 @@ public class PlayerAirborneState : PlayerBaseState
     }
     public override void CheckSwitchState(PlayerBaseState actualState)
     {
-       if(context.isGrounded)
+       if(context.isGrounded && movement.body2D.velocity.y < 0)
        {
             PlayerBaseState newState = playerObj.GetComponentInChildren<PlayerGroundState>();
             actualState.Exit(newState);

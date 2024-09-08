@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -22,8 +23,6 @@ public class PlayerStateController : MonoBehaviour
         superState.Enter();
         subState.Enter();
 
-        // groundHandler = gameObject.GetComponent<GroundHandler>();
-
     }
 
     // Update is called once per frame
@@ -42,12 +41,12 @@ public class PlayerStateController : MonoBehaviour
     {
         if (context.performed)
         {
-            movementInput = context.ReadValue<Vector2>();
+            movementInput.x = context.ReadValue<float>();
 
         }
         if (context.canceled)
         {
-            movementInput = context.ReadValue<Vector2>();
+            movementInput.x = context.ReadValue<float>();
         }
     }
     public void OnJump(InputAction.CallbackContext context)
