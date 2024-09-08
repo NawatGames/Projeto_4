@@ -8,12 +8,8 @@ public class GroundHandler : MonoBehaviour
     [SerializeField] private Transform feetPos;
     [SerializeField] private LayerMask whatIsGround;
 
-    [SerializeField] bool isGrounded;
+    public bool isGrounded;
     [SerializeField] float checkRadius = 1;
-
-    public bool IsGrounded => isGrounded;
-
-    public UnityEvent <bool> touchGroundEvent;
 
     private void OnDrawGizmosSelected()
     {
@@ -28,18 +24,11 @@ public class GroundHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var wasGrounded = isGrounded;
         isGrounded = Physics2D.OverlapCircle(feetPos.position,checkRadius,whatIsGround);
-
-        if(wasGrounded && !isGrounded)
-        {
-            touchGroundEvent.Invoke(false);
-        }
-        if(!wasGrounded && isGrounded)
-        {
-            touchGroundEvent.Invoke(true);
-        }
     }
 
-    
+    // public bool GetIsGrounded()
+    // {
+    //     return this.isGrounded;
+    // }
 }

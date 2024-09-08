@@ -7,7 +7,7 @@ public class PlayerIdleState : PlayerBaseState
     public override void CheckSwitchState(PlayerBaseState actualState)
     {
         Debug.Log("Idle State");
-        context = gameObject.GetComponent<PlayerStateController>();
+        context = playerObj.GetComponentInChildren<PlayerStateController>();
     }
 
     public override void Do()

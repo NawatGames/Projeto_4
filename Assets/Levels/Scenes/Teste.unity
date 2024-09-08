@@ -623,7 +623,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 315dc0ffe4aef044ea178e240a957fc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  context: {fileID: 0}
+  context: {fileID: 6458227456902456758}
+  playerObj: {fileID: 6458227457191157847}
 --- !u!1 &930440297
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,7 +703,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65bb785b1c03f854f9b3843647803ff1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  context: {fileID: 0}
+  context: {fileID: 6458227456902456758}
+  playerObj: {fileID: 6458227457191157847}
 --- !u!1 &1337765673
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,6 +808,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1485768535}
+  - component: {fileID: 1485768536}
   m_Layer: 0
   m_Name: Airborne
   m_TagString: Untagged
@@ -828,6 +831,20 @@ Transform:
   m_Father: {fileID: 6458227456902456752}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1485768536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485768534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3b88456792f6084abcb6dfc4fa26feb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  context: {fileID: 6458227456902456758}
+  playerObj: {fileID: 6458227457191157847}
 --- !u!4 &1570459313 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8066295808162778987, guid: b18b1bc2b6fb06e458bdacff202ce1b8, type: 3}
@@ -1589,9 +1606,6 @@ MonoBehaviour:
     m_Bits: 64
   isGrounded: 0
   checkRadius: 0.1
-  touchGroundEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &6458227456902456757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1604,7 +1618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 1803a58330a9e674c8a1739d6df7ddbd, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: f87962ef9d8561d448c87859fbd359a8, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -1631,8 +1645,40 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 527318fc-f01f-4eeb-b917-0dae867852a5
-    m_ActionName: Movement/Walk[/Keyboard/a,/Keyboard/d]
+    m_ActionId: a26ef37f-0178-45e4-b589-84480c516a07
+    m_ActionName: Movement/Horizontal[/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6458227456902456758}
+        m_TargetAssemblyTypeName: PlayerStateController, Assembly-CSharp
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9cc21dde-bbde-4621-a0fd-e89c5c2ce9f3
+    m_ActionName: Movement/Vertical[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6458227456902456758}
+        m_TargetAssemblyTypeName: PlayerStateController, Assembly-CSharp
+        m_MethodName: OnDash
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8697a245-d0dd-4c89-8cc2-f8c048de7321
+    m_ActionName: Movement/Dash[/Keyboard/shift]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Movement
@@ -1652,9 +1698,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   superState: {fileID: 0}
   subState: {fileID: 0}
-  xInput: 0
-  yInput: 0
+  groundHandler: {fileID: 6458227456902456756}
+  movementInput: {x: 0, y: 0}
   isDashing: 0
+  isGrounded: 0
 --- !u!1 &6458227457096840736
 GameObject:
   m_ObjectHideFlags: 0
@@ -1932,7 +1979,7 @@ GameObject:
   - component: {fileID: 1125696476025221564}
   - component: {fileID: 2683630584106773348}
   m_Layer: 0
-  m_Name: Final_Player
+  m_Name: Magus
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

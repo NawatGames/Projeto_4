@@ -8,9 +8,10 @@ public class PlayerStateController : MonoBehaviour
 {
     public PlayerBaseState superState;
     public PlayerBaseState subState;
-
+    public GroundHandler groundHandler;
     public Vector2 movementInput;
     public bool isDashing;
+    public bool isGrounded;
 
 
     // Start is called before the first frame update
@@ -18,15 +19,18 @@ public class PlayerStateController : MonoBehaviour
     {
         superState = gameObject.GetComponentInChildren<PlayerGroundState>();
         subState = gameObject.GetComponentInChildren<PlayerIdleState>();
-
         superState.Enter();
         subState.Enter();
+
+        // groundHandler = gameObject.GetComponent<GroundHandler>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
         superState.Do();
+        isGrounded = groundHandler.isGrounded;
     }
 
     void FixedUpdate()

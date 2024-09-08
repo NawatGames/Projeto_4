@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class PlayerBaseState: MonoBehaviour
 {
     public PlayerStateController context;
+    public GameObject playerObj;
     public virtual void Enter(){ }
     public virtual void SubState(PlayerBaseState actualSubState){ }
     public virtual void Do(){ }
