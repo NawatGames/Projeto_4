@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerIdleState : PlayerBaseState
+public class PlayerRunState : PlayerBaseState
 {
     public override void Enter()
     {
-        Debug.Log("Idle State");
+        Debug.Log("Run State");
         context = playerObj.GetComponentInChildren<PlayerStateController>();
-        movement.Idle();
+        movement.Run();
     }
     public override void CheckSwitchState(PlayerBaseState actualState)
     {

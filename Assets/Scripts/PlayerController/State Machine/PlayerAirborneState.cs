@@ -19,7 +19,7 @@ public class PlayerAirborneState : PlayerBaseState
     }
     public override void CheckSwitchState(PlayerBaseState actualState)
     {
-       if(context.isGrounded && movement.body2D.velocity.y < 0)
+       if(context.isGrounded && movement.body2D.velocity.y == 0)
        {
             PlayerBaseState newState = playerObj.GetComponentInChildren<PlayerGroundState>();
             actualState.Exit(newState);
